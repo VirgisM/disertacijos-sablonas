@@ -1,9 +1,10 @@
 Disertacijos šablonas (latex)
 =============================
 
-Disertacijos šablonas atitinka VU reikalavimus (2017 metai). 
+Disertacijos šablonas atitinka naujausius Vilniaus Universiteto disertacijoms keliamus reikalavimus. 
 
-Šios šablono versijos autorius: Rokas Astrauskas. 
+Šio šablono autorius Virginijus Marcinkevičius
+Šis šablonas paremtas Roko Astrausko disertacijos šablonu (2017m). 
 Originalaus šablono autorius: Theo Ruys, modifikuota: Tomas Krilavičius, Indrė Žliobaitė. Padėka Linas Petkevičius už titulinį lapą.
 
 
