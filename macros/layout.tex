@@ -1,0 +1,58 @@
+% [file: layout.tex, started: 18-March-2008]
+%
+% NOTES
+%   This macro file contains page layout info for Ph.D. thesis
+%
+% CHANGES
+%   2008.03.18	*	Started.
+
+% ----- layout parameters ------------------------------------------------
+\ifpdf
+	\usepackage[dvips=false, pdftex=true, vtex=false]{geometry}
+\else
+	\usepackage[dvips=true, pdftex=false, vtex=false]{geometry}
+\fi
+
+% VU requirements 2021 m.
+%puslapio dydis – B5 (17x24 cm),
+%apatinė paraštė 2 cm, viršutinė paraštė 1,5 cm, kairė ir dešinė paraštės turi būti 2,5 cm,
+%tarpai tarp eilučių – 1,15 intervalo,  (Rokas.: siuo metu paliktas defaultinis)
+%pirmojo lygmens antraštė – 12 pt. Times New Roman; likusios paantraštės - 11 pt. Times New Roman,
+%teksto šriftas – 11 pt. Times New Roman,
+\geometry{%
+ 	b5paper,
+    paperwidth=170mm, 
+    paperheight=240mm,
+ 	bindingoffset=0pt,
+ 	centering,
+ 	hmargin=25mm,
+    bottom=20mm,
+    top=15mm%,
+ 	%includehead,
+ 	%includefoot
+}  
+  
+\raggedbottom                           % height of text may vary per page
+
+%\iffalse
+\newlength{\oldparindent}
+\newlength{\oldparskip}
+
+\newcommand{\IZParagraph}{%
+    \setlength{\oldparindent}{\parindent}
+    \setlength{\oldparskip}{\parskip}
+    \setlength{\parindent}{5mm}            % no indent
+    \setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}    % space between paragraphs
+}
+
+\newcommand{\restoreParagraph}{%
+    \setlength{\parindent}{\oldparindent}
+    \setlength{\parskip}{\oldparskip}
+}
+%\fi
+
+%% VU requirements
+%% 1.15 linespacing, bet paliktas defaultinis
+%\linespread{1.15}
+\usepackage{setspace}
+%\onehalfspacing

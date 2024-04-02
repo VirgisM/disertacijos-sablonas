@@ -1,0 +1,68 @@
+\documentclass[11pt,b5paper,twoside,openany,final]{book}
+
+\input{macros/preambule.tex}
+
+\addto\captionsbritish{\renewcommand{\contentsname}{Table of Contents}}
+
+\begin{document}
+
+\frontmatter
+
+\include{title/titlepage}	
+		
+
+\cleardoublepage
+\restoreParagraph
+\pagestyle{plain}
+%\IZThesisHeadings
+\input{contents/toc} % Table of Contents
+
+%\IZThesisHeadings
+
+%-------------- Prasideda pagrindine disertacijos dalis  ------------------
+%\include{notation/notation}   %Pazymejimai
+
+\mainmatter
+
+%\IZThesisHeadings
+\pagestyle{plain}
+\IZParagraph
+
+
+\include{chapter_intro/chapter_intro}
+\include{chapter_1/chapter_1}
+
+\include{chapter_concl/chapter_concl}
+
+
+
+\backmatter
+
+\restoreParagraph
+\pagestyle{plain} 
+\include{bibliography/bibliography}
+
+%-------------- Baigiasi pagrindine disertacijos dalis  ------------------
+
+
+\IZParagraph
+
+%\include{vocabulary/vocabulary}  %Jeigu reikia ideti zodyna, pasitikrinti, kur jis turi buti
+\appendix  
+%\include{appendix_A/appendix_A}  %pdfe negraziai atrodo bookmarkai taip pridejus, bet pakenciama
+
+\include{summary/summary_lt}
+\include{cv/cv}    %Nors cv reikalavimo nera, VU doktoranturos skyrius turetu paprasyti prideti po santraukos gyvenimo aprasyma
+
+\backmatter
+\IZParagraph 
+\include{acknowledgements/acknowledgements}  %Neprivalomas
+
+\include{publications/publications}   %Publikaciju sarasas ir ju kopijos
+
+%\restoreParagraph
+%\include{index/index}  %indexas - nuorodos i puslapius, kur panaudota kokia svarbi savoka. Nereikalinga	
+
+\include{publishing/publishing}  %pacioje pabaigoje - darsyk pavadinimas ir leidykla
+
+\end{document}

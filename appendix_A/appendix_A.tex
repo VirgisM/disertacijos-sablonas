@@ -1,0 +1,20 @@
+\renewcommand{\thesection}{\alph{section}}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Appendix}
+\parammarks{Appendix}
+	
+\chapter*{Appendix}
+\label{cha:appendix}
+
+%\index{Algorithms}
+
+\renewcommand{\thefigure}{A.\arabic{figure}}   
+\setcounter{figure}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\setcounter{table}{0}
+%jeigu yra dar ko nors, pvz algoritmu, teor ir pan, irgi reikia atnaujinti
+
+\section{Algorithms}
+
+In this Appendix we present pseudo codes and the settings used for the peer algorithms, which we implemented and used in experimental evaluation through the thesis. For consistency, the algorithms were named using the first three letters of the surname of the first author.
