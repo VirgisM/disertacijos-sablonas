@@ -39,15 +39,16 @@
 	\fancyhead[L]{\IZheading{\rightmark}}
 }
 
-\newcommand{\parammarks}[1]{%
-	\fancyhead{}
-	\fancyhead[RO,LE]{}
-	\fancyhead[RO,LE]{\IZheading{#1}}
-	\fancyfoot{}
-	\fancyfoot[c]{\thepage}
-	\fancypagestyle{plain}{%
+% documentation is available here https://www.overleaf.com/learn/latex/Headers_and_footers#Notes_on_the_commands_used
+\newcommand{\parammarks}[1]{
+	\fancyhead{}                      %clears the settings for the headers
+	\fancyhead[RO,LE]{l}               %uses the header locations RO (RightOdd) and LE (LeftEven) to                                    place the content
+	\fancyhead[RO,LE]{\IZheading{#1}} %uses the header locations RO (RightOdd) and LE (LeftEven) to                                    place the content \IZheading{#1}
+	\fancyfoot{}                      %clears the settings for the footers
+	\fancyfoot[c]{\thepage}           %uses the footer locations center (c) to place the content \                                        of \thepage
+	\fancypagestyle{plain}{%  just add page numer at the center of page footer 
 		\fancyhf{}	
 		\fancyfoot[c]{\thepage}
-	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\headrulewidth}{0pt}%
 	}
 }
