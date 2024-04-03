@@ -1,11 +1,11 @@
 \renewcommand{\thesection}{\alph{section}}
-
-\phantomsection
-\addcontentsline{toc}{chapter}{Appendix}
-\parammarks{Appendix}
 	
 \chapter*{Appendix}
-\label{cha:appendix}
+\label{cha:appendixA}
+\addcontentsline{toc}{chapter}{\MakeUppercase{Appendix}}
+\phantomsection %The \phantomsection command is needed to create a link to a place in the document                      that is not a figure, equation, table, section, subsection, chapter, etc.
+
+\parammarks{Appendix}
 
 %\index{Algorithms}
 

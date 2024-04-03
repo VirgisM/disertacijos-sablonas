@@ -88,7 +88,8 @@
 \usepackage{verbatim} %IZ: multiline komentams 
 
 \usepackage{paralist}
-\usepackage{tabularx}
+\usepackage{tabularx}               %More advanced tables
+\usepackage{longtable}              %For long tables used in acronyms, notations, vocabulary
 \usepackage{booktabs}
 \usepackage{multirow}
 \setlength{\belowcaptionskip}{5pt}
@@ -104,18 +105,16 @@
 \usepackage{array}
 \usepackage{float}
 
-\usepackage{siunitx}   %paketas skaiciams ir SI vienetams vaizduoti. Galima ir nenaudoti, bet aukstesnis lygis
-\usepackage{textcomp}  %senas paketas, bet reikalingas kad nemestu kai kuriu siunitx klaidu
-\sisetup{load-configurations = abbreviations}
+\usepackage{siunitx}   %paketas skaiciams ir SI vienetams vaizduoti. Galima ir nenaudoti, bet aukstesnis lygis, naudojamo pavyzdys \qty{67890}{\degree}
+%\usepackage{textcomp}  %senas paketas, bet reikalingas kad nemestu kai kuriu siunitx klaidu
+%\sisetup{load-configurations = abbreviations}
+
 \setlength{\headheight}{19pt}  %kazkokia problema su headheight
 
 %Reikia sablonui. Galima istrinti
 \usepackage[version=4]{mhchem}
 \DeclareSIUnit \uM{\micro M}
 \DeclareSIUnit \mM{\milli M}
-
-
-
 
 % ----- macros ---------------------------------------------------------
 \input{macros/iz_macros.tex}

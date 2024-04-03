@@ -3,11 +3,15 @@
 % For faster compilation use includeonly
 \includeonly{  % comment out lines below to omit compiling
     title/titlepage,
+    abstract/abstract,
+    acronyms/acronyms_abbreviations,
     notation/notation,
+    vocabulary/vocabulary,
     chapter_intro/chapter_intro,
     chapter_1/chapter_1,
     chapter_concl/chapter_concl,
     bibliography/bibliography,
+    appendix_A/appendix_A,
     summary/summary_lt,
     cv/cv,
     acknowledgements/acknowledgements,
@@ -31,11 +35,17 @@
 
 \pagestyle{plain}
 
+\include{acknowledgements/acknowledgements}  %Neprivalomas
+\include{abstract/abstract}                  %Reziumė/abstract
+\include{acronyms/acronyms_abbreviations}    %Santaukos/akronimai ir sutrumpinimai/acronyms and abbreviations
+\include{notation/notation}   %Žymėjimai/Notations
+\include{vocabulary/vocabulary}  %Jeigu reikia ideti zodyna, pasitikrinti, kur jis turi buti
+
 \input{contents/toc} % Table of Contents
 
 %-------------- Prasideda pagrindine disertacijos dalis  ------------------
 %-------------- Start of main thesis part  ------------------
-\include{notation/notation}   %Pazymejimai/Notations
+
 
 %\mainmatter %ommand changes the behavior back to the expected version, and resets the page number. 
 
@@ -61,16 +71,16 @@
 
 \IZParagraph
 
-%\include{vocabulary/vocabulary}  %Jeigu reikia ideti zodyna, pasitikrinti, kur jis turi buti
+
 \appendix  
-%\include{appendix_A/appendix_A}  %pdfe negraziai atrodo bookmarkai taip pridejus, bet pakenciama
+\include{appendix_A/appendix_A}  %pdfe negraziai atrodo bookmarkai taip pridejus, bet pakenciama
 
 \include{summary/summary_lt}
 \include{cv/cv}    %Nors cv reikalavimo nera, VU doktoranturos skyrius turetu paprasyti prideti po santraukos gyvenimo aprasyma
 
 \backmatter
 \IZParagraph 
-\include{acknowledgements/acknowledgements}  %Neprivalomas
+
 
 \include{publications/publications}   %Publikaciju sarasas ir ju kopijos
 
@@ -80,3 +90,6 @@
 \include{publishing/publishing}  %pacioje pabaigoje - darsyk pavadinimas ir leidykla
 
 \end{document}
+
+%TODO
+% Neaišku kam naudojama \parammarks{Acknowledgements}, ir be jo teisingai viską rodo
