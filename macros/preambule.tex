@@ -1,15 +1,17 @@
 \usepackage{ifpdf}
 
+\input{settings.tex} %Various settings
 \input{macros/layout.tex}
-	
+
+
 \ifpdf
 \usepackage[pdftex]{hyperref,graphicx} % pdf references support
 
 \hypersetup{%
-	pdfauthor   = {Rokas Astrauskas},
-	pdftitle    = {COMPUTER MODELLING OF DIFFUSION - REACTION EQUATIONS},
+	pdfauthor   = {\thesisAuthorName \ \thesisAuthorSurname},
+	pdftitle    = {},
 	pdfsubject  = {PhD Thesis},
-	pdfkeywords = {},
+	pdfkeywords = {\thesisTitleEN},
 	pdfcreator  = {LaTeX with hyperref package},
 	pdfproducer = {pdflatex},
 	breaklinks  = {true},

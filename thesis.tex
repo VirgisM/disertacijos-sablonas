@@ -2,35 +2,33 @@
 
 \input{macros/preambule.tex}
 
+%Rename default Contents table name
 \addto\captionsbritish{\renewcommand{\contentsname}{Table of Contents}}
 
 \begin{document}
 
-\frontmatter
+%\frontmatter %command makes the pages numbered in lowercase roman
 
-\include{settings}
-\include{title/titlepage}	
-		
+\include{title/titlepage}
 
 \cleardoublepage
 \restoreParagraph
+
 \pagestyle{plain}
-%\IZThesisHeadings
+
 \input{contents/toc} % Table of Contents
 
-%\IZThesisHeadings
-
 %-------------- Prasideda pagrindine disertacijos dalis  ------------------
-%\include{notation/notation}   %Pazymejimai
+%-------------- Start of main thesis part  ------------------
+\include{notation/notation}   %Pazymejimai/Notations
 
-\mainmatter
+%\mainmatter %ommand changes the behavior back to the expected version, and resets the page number. 
 
-%\IZThesisHeadings
 \pagestyle{plain}
 \IZParagraph
 
-
 \include{chapter_intro/chapter_intro}
+
 \include{chapter_1/chapter_1}
 
 \include{chapter_concl/chapter_concl}
@@ -44,7 +42,7 @@
 \include{bibliography/bibliography}
 
 %-------------- Baigiasi pagrindine disertacijos dalis  ------------------
-
+%-------------- End of main thesis part  ------------------
 
 \IZParagraph
 
