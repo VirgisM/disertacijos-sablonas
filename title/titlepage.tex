@@ -1,10 +1,10 @@
 \thispagestyle{empty}                   % no headers and footers
-{\fontfamily{Calibri}\selectfont
+{\fontfamily{ptm}\selectfont
 %\linespread{1.25}\selectfont
-\renewcommand\bfdefault{bc}% or \renewcommand\bfdefault{m}
+\renewcommand\bfdefault{m}% \renewcommand\bfdefault{bc} does not work and changes to m (Medium (normal))
 %\renewcommand\seriesdefault{sb}
 %\renewcommand\mddefault{sb}
-\fontseries{sb}\selectfont
+%\fontseries{sb}\selectfont %Semibold https://tex.stackexchange.com/questions/68745/possible-values-for-fontseries-and-fontshape
 
 \begin{flushright}
 \thesisDOI \\ % Visi kintamieji yra nurodyti settings.tex faile
@@ -14,7 +14,7 @@
 
 	\vspace*{5mm}	
 	\begin{flushleft}
-\renewcommand\bfdefault{bc}
+\renewcommand\bfdefault{m}
 \bf \large
 	VILNIUS UNIVERSITY \\
 	\end{flushleft}
@@ -41,7 +41,7 @@
   \vspace{15mm}
 %  \vspace{5mm}
   \begin{flushleft}
-\renewcommand\bfdefault{bc}
+\renewcommand\bfdefault{m}
 \bf
   Natural Sciences, \\ %Mosklo sritis
   Informatics (N 009)  %Mokslo kryptis krypties kodas (kodas skliausteliuose, pvz., (N 001))
@@ -107,7 +107,7 @@ University, as well on the website of Vilnius University:\\
 
 \newpage
 \thispagestyle{empty}                   % no headers and footers
-{\fontfamily{Calibri}\selectfont
+{\fontfamily{ptm}\selectfont
 \begin{flushright}
 \thesisDOI \\
 \thesisORCID
@@ -116,7 +116,7 @@ University, as well on the website of Vilnius University:\\
 \begin{center}
 	\vspace*{5mm}	
 	   \begin{flushleft} 
-	\renewcommand\bfdefault{bc} 
+	\renewcommand\bfdefault{m} 
 	\bf \large
 	VILNIAUS UNIVERSITETAS \\
 	   \end{flushleft} 	
@@ -125,13 +125,13 @@ University, as well on the website of Vilnius University:\\
 	\vspace{50mm}
 	
 	\begin{flushleft}
-\renewcommand\bfdefault{bc} \bf
+\renewcommand\bfdefault{m} \bf
 	{\Large \bf  \thesisAuthorName  \\ \MakeUppercase{\thesisAuthorSurname} \par}
 \end{flushleft}
 	\vspace{10mm}
 	\begin{flushleft}
 	{\huge 
-    \renewcommand\bfdefault{bc}
+    \renewcommand\bfdefault{m}
     \bf
     Daktaro disertacijos pavadinimas
 	%REAKCIJOS-DIFUZIJOS PROCES\k{U} KOMPIUTERINIS MODELIAVIMAS ELEKTROCHEMIN\.{E}JE MIKROSKOPIJOJE IR L\k{A}STELI\k{U} SFEROIDUOSE
@@ -143,7 +143,7 @@ University, as well on the website of Vilnius University:\\
   	\end{flushleft}
   \vspace{15mm}
     	\begin{flushleft}
-\renewcommand\bfdefault{bc} \bf
+\renewcommand\bfdefault{m} \bf
   Gamtos mokslai,\\
   informatika (N 009)
   	\end{flushleft}
@@ -152,7 +152,7 @@ University, as well on the website of Vilnius University:\\
 	\noindent\rule{3cm}{0.4pt}
 \end{flushleft} 
 \begin{flushleft} 
-\renewcommand\bfdefault{bc} \bf
+\renewcommand\bfdefault{m} \bf
 	VILNIUS \thesisYear
 \end{flushleft} 
 \end{center}

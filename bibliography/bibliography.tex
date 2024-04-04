@@ -16,11 +16,12 @@
 \chapter*{Bibliography}
 \label{cha:bibliography}
 \addcontentsline{toc}{chapter}{\MakeUppercase{Bibliography}}
-\phantomsection %The \phantomsection command is needed to create a link to a place in the document                      that is not a figure, equation, table, section, subsection, chapter, etc.
+\phantomsection %The \phantomsection command is needed to create a link to a place in the document that is not a figure, equation, table, section, subsection, chapter, etc.
 	
 \parammarks{Bibliography}
 	
 %\bibliographystyle{plainnat}  %Sitas buvo originaliame sablone, bet galbut patogiau su santrumpomis
+\nocite{*} %Removes warning Package natbib Warning: Empty `thebibliography' environment on input line
 \bibliographystyle{abbrvnat} %Bibliografijoje vardai su santrumpomis
 \pagestyle{plain}
 \bibliography{thesis_bibliography}
