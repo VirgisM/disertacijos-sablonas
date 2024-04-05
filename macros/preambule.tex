@@ -3,7 +3,6 @@
 \input{settings.tex} %Various settings
 \input{macros/layout.tex}
 
-
 \ifpdf
 \usepackage[pdftex]{hyperref,graphicx} % pdf references support
 
@@ -37,6 +36,11 @@
 \fi
 
 % ----- packages ---------------------------------------------------------
+% Nutildome įspėjimus.
+\usepackage[immediate]{silence}
+\WarningFilter[temp]{latex}{Command \underbar has changed.} % silence sectsty package the warning
+\WarningFilter[temp]{latex}{Command \underline has changed.} % silence sectsty package the warning
+
 \renewcommand{\contentsname}{Table of Contents}
 %\usepackage[british]{babel}		% british-english style
 %------ ikeliau is preambule-santrauka
@@ -69,7 +73,8 @@
 
 \usepackage{fancyhdr}		% fancy headings and footers
 
-\usepackage{sectsty}			% change sections fonts, raises two warnings									
+\usepackage{sectsty}			% change sections fonts, raises two warnings			
+
 \setcounter{secnumdepth}{3}	% depth of enumerated sections
 
 \ifpdf
@@ -109,9 +114,11 @@
 %\usepackage{textcomp}  %senas paketas, bet reikalingas kad nemestu kai kuriu siunitx klaidu
 %\sisetup{load-configurations = abbreviations}
 
+
+
 \setlength{\headheight}{19pt}  %kazkokia problema su headheight
 
-%Reikia sablonui. Galima istrinti
+%Reikia sablonui. Galima ištrinti
 \usepackage[version=4]{mhchem}
 \DeclareSIUnit \uM{\micro M}
 \DeclareSIUnit \mM{\milli M}
