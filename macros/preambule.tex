@@ -20,13 +20,14 @@
     	bookmarksopenlevel = 2,
     	plainpages={false},
     	pdfpagetransition={Dissolve},	
-    	colorlinks = {true}, %defaultinis, padaro spalvotus staciakampius ant visu linku. Uzdejus true, bus tik spalvos ant skaiciu. Turbut graziau atrodo tik spalvos.
-    	%Norint nespalvotu nuorodu i formules, literatura, etc:
-    	%linkcolor = {black},
-    	%citecolor = {black},
-    	%filecolor = {black},
+    	colorlinks = {true}, %defaultinis, padaro spalvotus stačiakampius ant visų linkų. Uždėjus true, bus tik spalvos ant skaicių. Turbut gražiau atrodo tik spalvos.
+    	%Norint nespalvotu nuorodu į formules, literatura, etc:
+    	linkcolor = {black}, %Vidinių nuorodų spalava
+    	citecolor = {black}, %Citavimų spalva
+    	filecolor = {black}, 
+        urlcolor  = {black}, % Spalva išorinių nuorodų
     	%pilkos atspalviai:
-    	%linkcolor = [rgb]{0.3, 0.3, 0.3},
+    	% linkcolor = [rgb]{0.3, 0.3, 0.3},
     	%citecolor = [rgb]{0.6, 0.6, 0.6},
     	%filecolor = [rgb]{0.3, 0.3, 0.3},
     	%runcolor = [rgb]{0.3, 0.3, 0.3},
@@ -40,7 +41,7 @@
 \WarningFilter[temp]{latex}{Command \underbar has changed.} % silence sectsty package the warning
 \WarningFilter[temp]{latex}{Command \underline has changed.} % silence sectsty package the warning
 
-%------ ikeliau is preambule-santrauka
+%------ įkėliau iš preambule į santrauka
 %\usepackage[L7x]{fontenc}
 %\usepackage[utf8]{inputenc} % Accept different input encodings
 \usepackage[T1]{fontenc} %Font encoding. The T1 font encoding is an 8-bit encoding and uses fonts that have 256 glyphs. 
@@ -53,7 +54,7 @@
 \newcommand{\british}{\selectlanguage{british}}
 \newcommand{\lithuanian}{\selectlanguage{lithuanian}}
 %-----
-%Sprendimas į raidei
+%Sprendimas į raidei @TODO trinti kaip nereikaling1 nes panaudojame babel
 %\usepackage{ogonek}  %komandai \k kuri uzdeda kableli ant raidziu
 %\usepackage{newunicodechar}
 %\newunicodechar{Į}{\k{I}}
@@ -73,7 +74,6 @@
 \setlength{\bibsep}{0ex}
 
 \usepackage{fancyhdr}		    % Fancy headings and footers
-
 \usepackage{sectsty}			% Change sections fonts, raises two warnings			
 
 \setcounter{secnumdepth}{3}	    % Depth of enumerated sections
@@ -122,9 +122,14 @@
 \DeclareSIUnit \uM{\micro M}
 \DeclareSIUnit \mM{\milli M}
 
+\usepackage{tocloft}           %Control table of contents, figures, etc https://www.ctan.org/pkg/tocloft
+
 %------ Commands -----------
 \renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters adds dots in table of contents
+\renewcommand{\cftchapfont}{\normalfont} %Change chapter font to normal in table of contents
+\renewcommand{\cftchappagefont}{\normalfont} %Change chapter page number font to normal in table of contents
 
 % ----- macros ---------------------------------------------------------
 \input{macros/iz_macros.tex}
-\input{macros/headings.tex}
+% \input{macros/headings.tex} % Šablone labai parastas heading
