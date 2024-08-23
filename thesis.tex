@@ -10,15 +10,15 @@
     vocabulary/vocabulary,
     chapter_intro/chapter_intro,
     chapter_1/chapter_1,
-    %chapter_concl/chapter_concl,
-    %bibliography/bibliography,
-    %appendix_A/appendix_A,
-    %summary/summary_lt,
-    %cv/cv,
-    %acknowledgements/acknowledgements,
+    chapter_concl/chapter_concl,
+    bibliography/bibliography,
+    appendix_A/appendix_A,
+    summary/summary_lt,
+    cv/cv,
+    acknowledgements/acknowledgements,
     publications/publications,
-    %publications/publications(copies),
-    %publishing/publishing
+    publications/publications(copies),
+    publishing/publishing
 }
   
 \input{macros/preambule.tex}
@@ -41,7 +41,7 @@
 \include{abstract/abstract}                  %Reziumė/abstract
 \include{acronyms/acronyms_abbreviations}    %Santaukos/akronimai ir sutrumpinimai/acronyms and abbreviations
 \include{notation/notation}   %Žymėjimai/Notations
-\include{vocabulary/vocabulary}  %Jeigu reikia ideti zodyna, pasitikrinti, kur jis turi buti
+\include{vocabulary/vocabulary}  %Jeigu reikia įdėti žodyną, pasitikrinti, kur jis turi buti
 
 \input{contents/toc} % Table of Contents
 
@@ -75,17 +75,19 @@
 
 
 \appendix  
-\include{appendix_A/appendix_A}  %pdfe negraziai atrodo bookmarkai taip pridejus, bet pakenciama
+\include{appendix_A/appendix_A}  %PDFe negražiai atrodo bookmarkai taip pridėjus, bet pakenčiama
 
 \include{summary/summary_lt}
-\include{cv/cv}    %Nors cv reikalavimo nera, VU doktoranturos skyrius turetu paprasyti prideti po santraukos gyvenimo aprasyma
+\include{cv/cv}    %Nors cv reikalavimo nera, VU doktoranturos skyrius turetš paprašyti pridėti po santraukos gyvenimo aprašymą
 
 \backmatter
 \IZParagraph 
 
+%Publikacijų sąrašas / List of author pubications
+\include{publications/publications}  
 
-\include{publications/publications}   %Publikacijų sąrašas / List of author pubications
-\include{publications/publications(copies)}   %Publikacijų kopijos, kai disertacija rengiama mokslinių straipsnių pagrindu / Copies of publications when the dissertation is prepared on the basis of scientific articles
+%Publikacijų kopijos, kai disertacija rengiama mokslinių straipsnių pagrindu / Copies of publications when the dissertation is prepared on the basis of scientific articles
+\include{publications/publications(copies)}  
 
 %\restoreParagraph
 %\include{index/index}  %indexas - nuorodos i puslapius, kur panaudota kokia svarbi savoka. Nereikalinga	
