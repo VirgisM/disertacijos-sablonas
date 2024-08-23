@@ -37,6 +37,7 @@
 
 \pagestyle{plain}
 
+%Pagal disertacijos šabloną turinys prasideda nuo įvado
 \include{acknowledgements/acknowledgements}  %Neprivalomas
 \include{abstract/abstract}                  %Reziumė/abstract
 \include{acronyms/acronyms_abbreviations}    %Santaukos/akronimai ir sutrumpinimai/acronyms and abbreviations
@@ -78,20 +79,26 @@
 \IZParagraph
 
 
-\appendix  
+\appendix
 \include{appendix_A/appendix_A}  %PDFe negražiai atrodo bookmarkai taip pridėjus, bet pakenčiama
 
-\include{summary/summary_lt}
-\include{cv/cv}    %Nors cv reikalavimo nera, VU doktoranturos skyrius turetš paprašyti pridėti po santraukos gyvenimo aprašymą
-
 \backmatter
-\IZParagraph 
-
-%Publikacijų sąrašas / List of author pubications
+%Autoriaus publikacijų sąrašas / List of author pubications
 \include{publications/publications}  
 
 %Publikacijų kopijos, kai disertacija rengiama mokslinių straipsnių pagrindu / Copies of publications when the dissertation is prepared on the basis of scientific articles
 \include{publications/publications(copies)}  
+
+%Nors cv reikalavimo nera, VU doktoranturos skyrius turetš paprašyti pridėti po santraukos gyvenimo aprašymą
+\include{cv/cv}    
+
+\include{summary/summary_lt}
+
+
+\backmatter
+\IZParagraph 
+
+
 
 %\restoreParagraph
 %\include{index/index}  %indexas - nuorodos i puslapius, kur panaudota kokia svarbi savoka. Nereikalinga	
