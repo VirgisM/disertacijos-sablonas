@@ -23,9 +23,6 @@
   
 \input{macros/preambule.tex}
 
-%Rename default Contents table name
-\addto\captionsbritish{\renewcommand{\contentsname}{Table of Contents}}
-
 \begin{document}
 
 %\frontmatter %command makes the pages numbered in lowercase roman
@@ -46,9 +43,11 @@
 
 \input{contents/toc} % Table of Contents
 \newpage
+% \setlength{\cftparskip}{5pt} % Now lists of tables and figures will have correct spacing
 \listoftables
 \newpage
 \listoffigures
+% \setlength{\cftparskip}{0pt}
 
 %-------------- Prasideda pagrindine disertacijos dalis  ------------------
 %-------------- Start of main thesis part  ------------------
@@ -96,7 +95,7 @@
 
 
 \backmatter
-\IZParagraph 
+% \IZParagraph 
 
 
 
