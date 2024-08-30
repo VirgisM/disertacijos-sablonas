@@ -1,7 +1,7 @@
+%% The following defines the document class used to structure and format your thesis. Do not change this.
 \documentclass[11pt,b5paper,twoside,openany,final]{book}
-\usepackage{times}
 
-% For faster compilation, please use include only
+%% For faster compilation, please use include only
 \includeonly{% comment out lines below to omit to compile
     title/titlepage,
     abstract/abstract,
@@ -17,24 +17,30 @@
     cv/cv,
     acknowledgements/acknowledgements,
     publications/publications,
-    publications/publications(copies),
+    % publications/publications(copies),
     index/index,
     publishing/publishing
 }
-  
-\input{macros/preambule.tex}
 
+%% Insert various settings and macros from the preamble file
+\input{macros/preamble.tex}
+
+%% Start of the document
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title page
 %\frontmatter %command makes the pages numbered in lowercase roman
 
 \include{title/titlepage}
 
 % \cleardoublepage
-\restoreParagraph
+% \restoreParagraph
 
 \pagestyle{plain}
-\british  %Set language for this content
+\english  %Set language for this content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Frontmatter
 
 %Pagal disertacijos šabloną turinys prasideda nuo įvado
 \include{acknowledgements/acknowledgements}  %Neprivalomas
@@ -43,16 +49,17 @@
 \include{notation/notation}   %Žymėjimai/Notations
 \include{vocabulary/vocabulary}  %Jeigu reikia įdėti žodyną, pasitikrinti, kur jis turi buti
 
-\input{contents/toc} % Table of Contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tables of Content, Figures and Tables
+\input{contents/toc}
 \newpage
-% \setlength{\cftparskip}{5pt} % Now lists of tables and figures will have correct spacing
 \listoftables
 \newpage
 \listoffigures
-% \setlength{\cftparskip}{0pt}
 
-%-------------- Prasideda pagrindine disertacijos dalis  ------------------
-%-------------- Start of main thesis part  ------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start of main thesis part 
+%% Prasideda pagrindine disertacijos dalis
 
 %\mainmatter %ommand changes the behavior back to the expected version, and resets the page number. 
 
@@ -66,41 +73,55 @@
 \include{chapter_concl/chapter_concl}
 
 
-
 \backmatter
 
 \restoreParagraph
 \pagestyle{plain} 
+
+%% Bibliography
 \include{bibliography/bibliography}
 
-%-------------- Baigiasi pagrindine disertacijos dalis  ------------------
-%-------------- End of main thesis part  ------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% End of main thesis part
+%% Baigiasi pagrindinė disertacijos dalis
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Apendixes
 
 \IZParagraph
-
-
 \appendix
 \include{appendix_A/appendix_A}  %PDFe negražiai atrodo bookmarkai taip pridėjus, bet pakenčiama
 
 \backmatter
 
-%Autoriaus publikacijų sąrašas / List of author pubications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Aditional info about the author
+%% Autoriaus publikacijų sąrašas / List of author pubications
 \include{publications/publications}  
 
-%Publikacijų kopijos, kai disertacija rengiama mokslinių straipsnių pagrindu / Copies of publications when the dissertation is prepared on the basis of scientific articles
-\include{publications/publications(copies)}  
+%% Publikacijų kopijos, kai disertacija rengiama mokslinių straipsnių pagrindu / Copies of publications when the dissertation is prepared on the basis of scientific articles
+% \include{publications/publications(copies)}  
 
-%Nors cv reikalavimo nera, VU doktoranturos skyrius turetš paprašyti pridėti po santraukos gyvenimo aprašymą
+%% Curiculum vitae
+%Nors cv reikalavimo nėra, VU doktoranturos skyrius turetų paprašyti pridėti po santraukos gyvenimo aprašymą
 \include{cv/cv}    
 
-%Adding of Lithuanian summary. Note main text or summary should be in Lithuanian language. Other language preferably is English
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Summary. Note that the main text or summary should be in Lithuanian. Another language preferably is English
+%% In this example we use the dissertation language as English and for the summary Lithuanian
+% Adding text of Lithuanian summary. 
 \include{summary/summary_lt}
 
 \backmatter
 
-%\restoreParagraph
+\restoreParagraph
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Indexes. Optional
 \include{index/index}  %indeksas - nuorodos į puslapius, kur panaudota kokia svarbi savoka. Nereikalinga	
 
-\include{publishing/publishing}  %pačioje pabaigoje - darsyk pavadinimas ir leidykla. Publisher information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Finalize the document by adding publishing information
+%% Pačioje pabaigoje pridedama spausdinimo informacija (pvz., pavadinimas ir leidykla)
+\include{publishing/publishing}  
 
 \end{document}
