@@ -162,7 +162,13 @@
 \renewcommand{\cftafterlottitle}{\hfill\ } 
 \renewcommand{\cftafterloftitle}{\hfill\ } 
 
+%Formating TOC lists
 \addto\captionsbritish{
+    \renewcommand{\contentsname}{\MakeUppercase{\tableOfContentsName}}
+    \renewcommand{\listtablename}{\MakeUppercase{\listOfTableName}}
+    \renewcommand{\listfigurename}{\MakeUppercase{\listOfFiguresName}}
+}
+\addto\captionslithuanian{
     \renewcommand{\contentsname}{\MakeUppercase{\tableOfContentsName}}
     \renewcommand{\listtablename}{\MakeUppercase{\listOfTableName}}
     \renewcommand{\listfigurename}{\MakeUppercase{\listOfFiguresName}}

@@ -29,10 +29,11 @@
 
 \include{title/titlepage}
 
-\cleardoublepage
+% \cleardoublepage
 \restoreParagraph
 
 \pagestyle{plain}
+\british  %Set language for this content
 
 %Pagal disertacijos šabloną turinys prasideda nuo įvado
 \include{acknowledgements/acknowledgements}  %Neprivalomas
@@ -51,7 +52,6 @@
 
 %-------------- Prasideda pagrindine disertacijos dalis  ------------------
 %-------------- Start of main thesis part  ------------------
-
 
 %\mainmatter %ommand changes the behavior back to the expected version, and resets the page number. 
 
@@ -82,6 +82,7 @@
 \include{appendix_A/appendix_A}  %PDFe negražiai atrodo bookmarkai taip pridėjus, bet pakenčiama
 
 \backmatter
+
 %Autoriaus publikacijų sąrašas / List of author pubications
 \include{publications/publications}  
 
@@ -91,20 +92,14 @@
 %Nors cv reikalavimo nera, VU doktoranturos skyrius turetš paprašyti pridėti po santraukos gyvenimo aprašymą
 \include{cv/cv}    
 
+%Adding of Lithuanian summary. Note main text or summary should be in Lithuanian language. Other language preferably is English
 \include{summary/summary_lt}
 
-
 \backmatter
-% \IZParagraph 
-
-
 
 %\restoreParagraph
 %\include{index/index}  %indexas - nuorodos i puslapius, kur panaudota kokia svarbi savoka. Nereikalinga	
 
-\include{publishing/publishing}  %pacioje pabaigoje - darsyk pavadinimas ir leidykla
+\include{publishing/publishing}  %pačioje pabaigoje - darsyk pavadinimas ir leidykla. Publisher information
 
 \end{document}
-
-%TODO
-% Neaišku kam naudojama \parammarks{Acknowledgements}, ir be jo teisingai viską rodo

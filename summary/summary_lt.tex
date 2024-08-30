@@ -1,3 +1,4 @@
+%Change default parameters for Lithuanian language
 \setcounter{section}{0}   %šita automatiškai atnaujina \appendix komanda
 \renewcommand*{\thesection}{S.\arabic{section}}
 \renewcommand{\thechapter}{S}
@@ -9,19 +10,20 @@
 \setcounter{table}{0}
 %jeigu yra dar ko nors, pvz algoritmu, teor ir pan, irgi reikia atnaujinti
 
-\phantomsection
-% \parammarks{Santrauka (Summary in Lithuanian)}
-
-\chapter*{Summary in Lithuanian / Summary in English}
-\label{cha:summary_lt}
-\addcontentsline{toc}{chapter}{\MakeUppercase{Summary in Lithuanian - Summary in English}}
-
 \lithuanian   %nustatome lietuviu kalba
 \sisetup{output-decimal-marker = {,}}  %lietuviski kableliai ir pan
 \sisetup{exponent-product=\ensuremath{\cdot}}
 
+
+\phantomsection
+\chapter*{Summary in Lithuanian / Summary in English}
+\label{cha:summary_lt}
+\addcontentsline{toc}{chapter}{\MakeUppercase{Summary in Lithuanian - Summary in English}}
+
+\input{chapter_intro/chapter_intro_lt}
+
 \input{summary/summary_text_lt}
 
-
+\input{chapter_concl/chapter_concl_lt}
 
 \british  %griztame prie anglu kalbos

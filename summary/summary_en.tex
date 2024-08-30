@@ -1,8 +1,25 @@
-\addcontentsline{toc}{chapter}{\numberline{}Summary}
-	
-\parammarks{Summary}
+%Change default parameters for English language
+\setcounter{section}{0}   %šita automatiškai atnaujina \appendix komanda
+\renewcommand*{\thesection}{S.\arabic{section}}
+\renewcommand{\thechapter}{S}
+\renewcommand{\thefigure}{S.\arabic{figure}}   %raidė S įhardcodinta. Galima švelniau pvz su komanda \thechapter
+\setcounter{figure}{0}
+\renewcommand{\theequation}{S.\arabic{equation}}
+\setcounter{equation}{0}
+\renewcommand{\thetable}{S.\arabic{table}}
+\setcounter{table}{0}
+%jeigu yra dar ko nors, pvz algoritmu, teor ir pan, irgi reikia atnaujinti
 
-\chapter*{Summary}
-\label{cha:summary}
+\phantomsection
+
+\chapter*{Summary in Lithuanian / Summary in English}
+\label{cha:summary_en}
+\addcontentsline{toc}{chapter}{\MakeUppercase{Summary in Lithuanian - Summary in English}}
+
+\british  %nustatome prie anglą kalbos
 
 \input{summary/summary_text_en}
+
+\lithuanian   %nustatome lietuvių kalba
+\sisetup{output-decimal-marker = {,}}  %lietuviški kableliai ir pan.
+\sisetup{exponent-product=\ensuremath{\cdot}}
