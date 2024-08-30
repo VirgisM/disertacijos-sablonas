@@ -4,20 +4,22 @@
 %
 % DESCRIPTION
 %   This file includes Index chapter of the PhD Thesis. 
+%   USe command \index{keyword} to add "keyword" to the index
 %
 % CHANGES
 %   2005.08.25  *  Started.
 %   2008.03.18  *  Adapted to IZ.
-
-%\chapter{Index}
-%	\label{chapter:Index}
+%   2024.08.30  *  Fixed to fit VU dissertation template
+% \chapter{Index}
+% \label{chapter:Index}
 
 \addtocontents{toc}{\protect\enlargethispage{2\baselineskip}}
 \phantomsection
-\addcontentsline{toc}{chapter}{\numberline{}Index}
+% \addcontentsline{toc}{chapter}{\numberline{}Index} % \numberline{} atitraukia į šalį
+\addcontentsline{toc}{chapter}{\MakeUppercase{Index}}
 
-\indexmarks
-
+%To add something to index please use command \index{keyword}
+%Show index items in two-column style sorted by name
 {\raggedright
-\printindex
+    \printindex
 }

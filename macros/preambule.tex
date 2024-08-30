@@ -78,8 +78,9 @@
 \fi
 
 \usepackage{makeidx}			% index package
-\makeindex						% generate index entries
-%\usepackage{fix2col}			% fix two-column marks
+\makeindex
+% \usepackage{fix2col}			% fix two-column marks since 2015 not update use multicolumn instead
+\usepackage{multicol}           % Allows change text column number in the page https://ctan.org/pkg/multicol
 \input{macros/index.tex}	    % macros for dictionary like index			
 
 \usepackage{palatino}			% IZ selection, font package
@@ -195,7 +196,7 @@
 % ----- macros ---------------------------------------------------------
 \input{macros/iz_macros.tex}
 % \input{macros/headings.tex} % Šablone labai parastas heading, todėl nenaudojame
-
+% \input{macros/index.tex} %yra viršuje
 
 
 %-------Usefull commands --------------
