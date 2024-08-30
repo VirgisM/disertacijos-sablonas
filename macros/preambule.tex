@@ -131,6 +131,14 @@
 \titlespacing*{\subsection} {0pt}{13.5pt}{13.5pt}
 \titlespacing*{\subsubsection} {0pt}{13.5pt}{13.5pt}
 
+\titlelabel{\thetitle.\quad} %Add dot after chapter, section numbers
+% The unnumbered definition follows
+\titleformat{name=\chapter}[display]
+    {\normalfont}{}{-14mm}{\thechapter. \quad\centering\normalfont\MakeUppercase}
+\titleformat{name=\chapter,numberless}[display]
+    {\normalfont}{}{-14mm}{\centering\normalfont\MakeUppercase}
+
+    
 % % \newcommand{\mychapter}[1]{
 % \titleformat{\chapter}[block]
 %  %{chapter style}{chapter text} {space before chapter title} {chapter title format}
@@ -140,12 +148,10 @@
 % {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 
 %TOC
+\tocloftpagestyle{plain}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters adds dots in table of contents
 \renewcommand{\cftchapfont}{\normalfont} %Change chapter font to normal in table of contents
 \renewcommand{\cftchappagefont}{\normalfont} %Change chapter page number font to normal in table of contents
-
-% \renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries} 
-
 
 %Rename default Contents table name and change font size
 \renewcommand{\cfttoctitlefont}{\fontsize{12}{13.5}\selectfont\normalfont\hfill}
@@ -174,6 +180,11 @@
 \setlength{\cftbeforesubsubsecskip}{0pt}
 \setlength{\cftbeforeparaskip}{0pt}
 \setlength{\cftparskip}{5pt}
+
+%Add dot after chapter, section, subsection number to fit dissetation format
+\renewcommand{\cftchapaftersnum}{.}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
 
 % ----- macros ---------------------------------------------------------
 \input{macros/iz_macros.tex}
