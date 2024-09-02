@@ -1,10 +1,19 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tile page in English or Lithuanian.
+%% The First title is in English and the second one in Lithuanian
+%% Please copy place the pages places if you change to first title Lithuanian and second English
+%% All variables used in this file are defined in settings.text file / Visi kintamieji yra nurodyti settings.tex faile
+
+%% Set page style, font family and line spacing 
 \thispagestyle{empty}                   % no headers and footers
 {\fontfamily{ptm}\selectfont
 \linespread{1.15}\selectfont
 % Nustatome šrifto dydį, plotį, žr. https://tex.stackexchange.com/questions/68745/possible-values-for-fontseries-and-fontshape
 \renewcommand\bfdefault{m}% \renewcommand\bfdefault{bc} does not work and changes to m (Medium (normal))
 
-% Visi kintamieji yra nurodyti settings.tex faile / All constants are in settings.tex file
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tile page in English
+
 \begin{flushright}
     \thesisDOI \\
     \thesisORCID
@@ -100,7 +109,8 @@ The text of this dissertation can be accessed at the Library of Vilnius
 University, as well on the website of Vilnius University: \\ 
 \href{https://www.vu.lt/lt/naujienos/ivykiu-kalendorius}{ \textit{\underline{https://www.vu.lt/lt/naujienos/ivykiu-kalendorius}}}.
 
-%\end{singlespace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title in Lithuanian language
 
 \newpage
 \thispagestyle{empty}                   % no headers and footers
@@ -198,4 +208,3 @@ Disertacija ginama viešame Gynimo tarybos posėdyje 20.. m. .......... ... d. .
 Disertaciją galima peržiūrėti Vilniaus universiteto bibliotekoje ir Vilniaus universiteto interneto svetainėje adresu: 
 \href{https://www.vu.lt/lt/naujienos/ivykiu-kalendorius}{ \textit{\underline{https://www.vu.lt/lt/naujienos/} \underline{ivykiu-kalendorius}}}. 
 
-% \end{singlespace}

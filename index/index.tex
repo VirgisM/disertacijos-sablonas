@@ -1,25 +1,26 @@
-% [file: index.tex, started: 25-Aug-2005]
-%
-% PhD Thesis - top level LaTeX source file.
-%
-% DESCRIPTION
-%   This file includes Index chapter of the PhD Thesis. 
-%   USe command \index{keyword} to add "keyword" to the index
-%
-% CHANGES
-%   2005.08.25  *  Started.
-%   2008.03.18  *  Adapted to IZ.
-%   2024.08.30  *  Fixed to fit VU dissertation template
-% \chapter{Index}
-% \label{chapter:Index}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% [file: index.tex, started: 25-Aug-2005]
+%%
+%% PhD Thesis - top level LaTeX source file.
+%%
+%% DESCRIPTION
+%%   This file includes Index chapter of the PhD Thesis. 
+%%   USe command \index{keyword} to add "keyword" to the index
+%%
+%% CHANGES
+%%   2005.08.25  *  Started.
+%%   2008.03.18  *  Adapted to IZ.
+%%   2024.08.30  *  Fixed to fit VU dissertation template
+%% \chapter{Index}
+%% \label{chapter:Index}
 
 \addtocontents{toc}{\protect\enlargethispage{2\baselineskip}}
 \phantomsection
 % \addcontentsline{toc}{chapter}{\numberline{}Index} % \numberline{} atitraukia į šalį
 \addcontentsline{toc}{chapter}{\MakeUppercase{Index}}
 
-%To add something to index please use command \index{keyword}
-%Show index items in two-column style sorted by name
+%% Show index items in two-column style sorted by name
+%To add something to the index please use command \index{keyword}
 {\raggedright
     \printindex
 }

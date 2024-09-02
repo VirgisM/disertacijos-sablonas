@@ -1,25 +1,27 @@
-% [file: layout.tex, started: 18-March-2008]
-%
-% NOTES
-%   This macro file contains page layout info for Ph.D. thesis
-%
-% CHANGES
-%   2008.03.18	*	Started.
-%   2024.09.02  *   Updated to fit Ph.D requirements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% [file: layout.tex, started: 18-March-2008]
+%%
+%% NOTES
+%%   This macro file contains page layout info for Ph.D. thesis
+%%
+%% CHANGES
+%%   2008.03.18	*	Started.
+%%   2024.09.02  *   Updated to fit Ph.D requirements
 
-% ----- layout parameters ------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% layout parameters
 \ifpdf
 	\usepackage[dvips=false, pdftex=true, vtex=false]{geometry}
 \else
 	\usepackage[dvips=true, pdftex=false, vtex=false]{geometry}
 \fi
 
-% VU requirements from 2021.
-%puslapio dydis – B5 (17x24 cm),
-%apatinė paraštė 2 cm, viršutinė paraštė 1,5 cm, kairė ir dešinė paraštės turi būti 2,5 cm,
-%tarpai tarp eilučių – 1,15 intervalo, 
-%pirmojo lygmens antraštė – 12 pt. Times New Roman; likusios paantraštės - 11 pt. Times New Roman,
-%teksto šriftas – 11 pt. Times New Roman,
+%% VU requirements from 2021. VU reikalavimai disertacijos pulspio dydžui
+% Puslapio dydis – B5 (17x24 cm),
+% Apatinė paraštė 2 cm, viršutinė paraštė 1,5 cm, kairė ir dešinė paraštės turi būti 2,5 cm,
+% Tarpai tarp eilučių – 1,15 intervalo, 
+% Pirmojo lygmens antraštė – 12 pt. Times New Roman; likusios paantraštės - 11 pt. Times New Roman,
+% Teksto šriftas – 11 pt. Times New Roman,
 \geometry{%
  	b5paper,
     paperwidth=170mm, 
@@ -35,7 +37,6 @@
   
 \raggedbottom                           % height of text may vary per page
 
-%\iffalse
 \newlength{\oldparindent}
 \newlength{\oldparskip}
 
@@ -52,12 +53,8 @@
     \setlength{\parindent}{\oldparindent}
     \setlength{\parskip}{\oldparskip}
 }
-%\fi
 
 %% VU requirements
-%% 1.15 linespacing, bet paliktas defaultinis
+% Tarpai tarp eilučių – 1,15 intervalo, 
 \linespread{1.15}
 
-% \usepackage{setspace}
-% \setlength\parindent{0.75cm} %galima nusatyti visiems, bet naudojamas IZParagraph stilius
-%\onehalfspacing

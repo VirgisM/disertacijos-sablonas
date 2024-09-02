@@ -1,34 +1,61 @@
-% \titlespacing*{\chapeter} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
-% \titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
-% \titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-% \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-% \titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Chapter 1
 
-
-
+%% Set chapters counter to zero.
 \setcounter{chapter}{0}
+
 \chapter{\MakeUppercase{Literature review / Literatūros apžvalga}} %Make it upper case to appear in TOC correctly
 \label{cha:review}
-% You should rename the title of this chapter to fit your dissertation domain
-% Skyriaus pavadinimas parenkamas taip, kad atitiktų apžvalgą disertacijos srityje
 
-\index{Lorem} ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu. Etiam eget rhoncus nunc, in tempus urna. Etiam dignissim quam libero, et aliquam urna tincidunt ac. Aliquam erat volutpat. Aliquam non urna nulla. Aliquam sodales porta tristique. Suspendisse efficitur ante non elit consectetur, et tincidunt nisl ultrices. Proin mollis eleifend lacus, ut fermentum justo porta a.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Text / Tekstas
+
+A literature review surveys prior research published in books, scholarly articles, and any other sources relevant to a particular issue, area of research, or theory, and by so doing, provides a description, summary, and critical evaluation of these works in relation to the research problem being investigated. Literature reviews are designed to provide an overview of sources you have used in researching a particular topic and to demonstrate to your readers how your research fits within existing scholarship about the topic.  (Fink, Arlene. Conducting Research Literature Reviews: From the Internet to Paper. Fourth edition. Thousand Oaks, CA: SAGE, 2014.)\footnote{https://libguides.usc.edu/writingguide/literaturereview}. 
+
+You should rename the title of this chapter to fit your dissertation domain. 
+
+It must describe the research conducted on the topic of the dissertation in Lithuania and abroad and show the contribution of the author of the dissertation to the issue under consideration.
+Although there are no formal requirements for the review, it is recommended that it be no longer than 50\% of the entire text of the dissertation (excluding the introduction). The recommended volume of the literature review is 33\% of the entire dissertation text.
+
+\textbf{In Lithuanian}. Literatūros apžvalga, tai apžvalga ir tyrimas: knygų, mokslinių straipsnių ir kitų susijusių su pasirinkta tyrimo problema šalinių, tyrimo srities, teorijos. 
+Literatūros apžvalga leidžia apibrėžti, apibendrinti ir kritiškai įvertinti darbus susijusius su norima tirti tyrimo problema.
+Literatūros apžvalga leidžia pademonstruoti skaitytojams kad jūsų tyrimas priklauso platesniam tyrimų ratui, sričiai. (Fink, Arlene. Conducting Research Literature Reviews: From the Internet to Paper. Fourth edition. Thousand Oaks, CA: SAGE, 2014.) 
 
 
-\section{Introduction}
-\label{sec:introduction}
+Šio skyriaus pavadinimas parenkamas taip, kad atitiktų apžvalgą disertacijos srityje.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu. Etiam eget rhoncus nunc, in tempus urna. Etiam dignissim quam libero, et aliquam urna tincidunt ac. Aliquam erat volutpat. Aliquam non urna nulla. Aliquam sodales porta tristique. Suspendisse efficitur ante non elit consectetur, et tincidunt nisl ultrices. Proin mollis eleifend lacus, ut fermentum justo porta a.
+Tyrimų apžvalga.\index{Tyrimų apžvalga} Joje turi būti aprašyti disertacijos tema \textbf{Lietuvoje ir užsienyje atlikti tyrimai} ir parodyta, koks yra disertacijos autoriaus indėlis į nagrinėjamą problematiką.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu. Etiam eget rhoncus nunc, in tempus urna. Etiam dignissim quam libero, et aliquam urna tincidunt ac. Aliquam erat volutpat. Aliquam non urna nulla. Aliquam sodales porta tristique. Suspendisse efficitur ante non elit consectetur, et tincidunt nisl ultrices. Proin mollis eleifend lacus, ut fermentum justo porta a \cite{demoABook, demoArticle}.
+Nors formalių reikalavimų apžvalgai nėra, tačiau rekomenduojama kad ji būtų ne ilgesnė negu 50\% viso disertacijos teksto (atmetus įvadą). Rekomenduojama literatūros apžvalgos apimtis 33\% viso disertacijos teksto.
 
-\section{Physical model} \label{sec:reakc_phys}
 
-\subsection{Reaction rate constants}  \label{subs:reakc_const}
+\section{How to use \LaTeX{} / Kaip galima panaudoti \LaTeX{}?}
+\label{sec:intro_latex}
 
-\subsubsection{Reaction rate constants}  \label{subs:reakc_const2}
+The thesis is composed of each chapters that are themselves composed of sections, sub-sections, etc.
+To create such a heading structure, you can use the commands \verb|\chapter{}|, \verb|\section{}|, \verb|\subsection{}|, \verb|\subsubsection{}|, and \verb|\paragraph{}|. 
+Note that, while \verb|\section{}| should be inside a \verb|\chapter{}|, a \verb|\subsection{}| inside a \verb|\section{}|, etc., a \verb|\paragraph{}| is not numbered and can thus be added inside any of those.
 
-In this research, the kinetic constants for reactions were gathered from references  and adjusted to better fit experimental results (Table \ref{tab:const}). Kinetic constants $k_{-1}$, $k_{-3}$, $k_{-4}$ for reactions were determined from the model and were set to the following values: $k_{-1} = \SI{10}{s^{-1}}$, $k_{-3} = \SI{2000}{M^{-1}s^{-1}}$. The constant $k_{-4}$ was set to zero, because the backward reaction is much slower than other reactions in diffusion-related processes. 
+If you wish to cross-reference a heading elsewhere in the text, you will need to do two things. 
+First you must give that heading a \emph{label} using the command \verb|\label{}|, e.g. \verb|\label{sec:TextStructure}|. This label should be put right after the heading declaration: either on the same line or the next one.
+Then, you can cross-reference the heading in the text using commands like \verb|\cref{}|.
+More information about cross-referencing can be found in \Cref{sec:crossreferencing}.
+
+
+ \cite{demoABook, demoArticle}.
+
+This template supports four levels of section: \verb|\chapter{}|,
+\verb|\section{}|, \verb|\subsection{}| and \verb|subsubsection{}|.
+
+
+\section{A Section} \label{sec:section}
+
+\subsection{A Sub-section}  \label{subs:subsection}
+
+\subsubsection{A Sub-sub-section}  \label{subs:subsubsection}
+
+
+\section{Usage of tables / Lentelių panaudojimas}
 
 \begin{table}[ht!]
   \centering
@@ -50,7 +77,7 @@ In this research, the kinetic constants for reactions were gathered from referen
 \end{table}
 
 
-\section{Mathematical model}  \label{sec:reakc_math}
+\section{Figures}  \label{sec:figures}
 
 \begin{figure}[ht!]
 \centering
@@ -61,7 +88,10 @@ In this research, the kinetic constants for reactions were gathered from referen
 
 Measurements of SECM acting in the redox-competition mode are changed into the scheme (\ref{fig:Domain}) due to the radial symmetry around the central axis of the electrode. Radial symmetry is a standard assumption in SECM modelling, though the case of off-centered UME was also investigated.
 
+
+\section{Equations}  \label{sec:equations}
 According to the second Fick’s law , diffusion processes are expressed by the system of partial differential equations (PDE):
+
 \begin{equation}
   \begin{aligned}\label{eq:reakc_eq1}
   \frac{\partial C_{O_2}}{\partial t} &= D_{O_2}\,\Delta C_{O_2},\\
@@ -70,6 +100,7 @@ According to the second Fick’s law , diffusion processes are expressed by the 
   \frac{\partial C_{Gll}}{\partial t} &= D_{Gll}\,\Delta C_{Gll},  \quad for\; 0<t\leq T,\; 0<z<d,\; 0<r<r_{glass},
   \end{aligned}
 \end{equation}
+
 where:
 \begin{itemize}
   \item[] $C_{O_2}$, $C_{Glc}$, $C_{H_2 O_2}$ and $ C_{Gll}$ are concentrations of diffusing reagents and expressed as functions of time $t$ and spatial coordinates $z$ and $r$. Notation $C_{\text{diff}} = C_{\text{diff}} \left( t, z, r \right) = \left( C_{O_2}, C_{Glc}, \allowbreak C_{H_2 O_2}, \allowbreak C_{Gll} \right)$ was used when 4 diffusing re\-agents were considered together.
@@ -83,3 +114,18 @@ where:
   \end{equation*}
 \end{itemize}
 
+
+\subsection{Lists}
+\label{subsec:lists}
+
+\begin{enumerate}
+  \item Numbered lists should be presented using the environment \verb|enumerate| like in this example. 
+  This environment applies the numbering and defines the format and spacing automatically. 
+  % \item Add the option \verb|[noitemsep]| to the environment to have no additional space between numbered list items (like is done here).
+\end{enumerate}
+
+\begin{itemize}
+  \item Bulleted lists should be presented using the environment \verb|itemize| like in this example. 
+  This environment applies the numbering and defines the format and spacing automatically. 
+  % \item Add the option \verb|[noitemsep]| to the environment to have no additional space between bulleted list items  (this is not done here).
+\end{itemize}

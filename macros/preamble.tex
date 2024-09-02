@@ -1,3 +1,6 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Preamble file is used to define pdf parameters, to include required packages
+
 \usepackage{ifpdf}
 
 \input{settings.tex} %Various settings
@@ -21,12 +24,12 @@
     	plainpages={false},
     	pdfpagetransition={Dissolve},	
     	colorlinks = {true}, %defaultinis, padaro spalvotus stačiakampius ant visų linkų. Uždėjus true, bus tik spalvos ant skaicių. Turbut gražiau atrodo tik spalvos.
-    	%Norint nespalvotu nuorodu į formules, literatura, etc:
+    	% Norint nespalvotu nuorodu į formules, literatura, etc, nustatome šias spalvas
     	linkcolor = {black}, %Vidinių nuorodų spalava
     	citecolor = {black}, %Citavimų spalva
     	filecolor = {black}, 
         urlcolor  = {black}, % Spalva išorinių nuorodų
-    	%pilkos atspalviai:
+    	% pilkos atspalviai:
     	% linkcolor = [rgb]{0.3, 0.3, 0.3},
     	%citecolor = [rgb]{0.6, 0.6, 0.6},
     	%filecolor = [rgb]{0.3, 0.3, 0.3},
@@ -36,10 +39,12 @@
     \usepackage[dvips,ps2pdf]{hyperref,graphicx} % pdf references support
 \fi
 
-% ----- packages ---------------------------------------------------------
-\usepackage[immediate]{silence} %package to silence some warnings
-\WarningFilter[temp]{latex}{Command \underbar has changed.} % silence sectsty package the warning
-\WarningFilter[temp]{latex}{Command \underline has changed.} % silence sectsty package the warning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Packages that are used in the document
+
+\usepackage[immediate]{silence} % Package to silence some warnings
+\WarningFilter[temp]{latex}{Command \underbar has changed.} % Silence sectsty package the warning
+\WarningFilter[temp]{latex}{Command \underline has changed.} % Silence sectsty package the warning
 
 %------ įkėliau iš preambule į santrauka
 %\usepackage[L7x]{fontenc}
@@ -79,7 +84,7 @@
 
 \usepackage{makeidx}			% index package
 \makeindex
-% \usepackage{fix2col}			% fix two-column marks since 2015 not update use multicolumn instead
+% \usepackage{fix2col}			% fix two-column marks since 2015 not update use multicolumn instead. TODO delete
 \input{macros/index.tex}	    % macros for dictionary like index			
 
 \usepackage{palatino}			% IZ selection, font package
@@ -111,7 +116,7 @@
 
 \setlength{\headheight}{19pt}  %Kažkokia problema su headheight
 
-%Reikia sablonui. Galima ištrinti
+% Reikia sablonui. Gal galima ištrinti?
 \usepackage[version=4]{mhchem} %Typeset chemical formulae/equations https://ctan.org/pkg/mhchem
 \DeclareSIUnit \uM{\micro M}
 \DeclareSIUnit \mM{\milli M}
@@ -120,8 +125,10 @@
 
 \usepackage{titlesec}          %Select alternative section titles https://ctan.org/pkg/titlesec. Used for correct spacing and alignment of various titles
 
-%------ Formating commands -----------
-%Nustatomi fontai pagal skyrių reikalavimus
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Various document formatting redefinitions
+
+% Set fonts according to the style / Nustatomi fontai pagal skyrių reikalavimus
 \chapterfont{\fontsize{12}{13.5}\selectfont\normalfont\centering\MakeUppercase}
 \sectionfont{\fontsize{12}{13.5}\selectfont\normalfont\centering}
 \subsectionfont{\fontsize{11}{12}\selectfont\normalfont\centering}
@@ -138,16 +145,7 @@
 \titleformat{name=\chapter,numberless}[display]
     {\normalfont}{}{-14mm}{\centering\normalfont\MakeUppercase}
 
-    
-% % \newcommand{\mychapter}[1]{
-% \titleformat{\chapter}[block]
-%  %{chapter style}{chapter text} {space before chapter title} {chapter title format}
-%  {\normalfont}{-}{-10mm}{\thechapter . \centering\normalfont\MakeUppercase}
-
-%  \titleformat{\chapter}[display]
-% {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
-
-%TOC
+%% TOC (Table of Contents) formatting
 \tocloftpagestyle{plain}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters adds dots in table of contents
 \renewcommand{\cftchapfont}{\normalfont} %Change chapter font to normal in table of contents
@@ -192,12 +190,14 @@
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
 
-% ----- macros ---------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Additional macros
+
 \input{macros/iz_macros.tex}
-% \input{macros/headings.tex} % Šablone labai parastas heading, todėl nenaudojame
 % \input{macros/index.tex} %yra viršuje
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Useful commands
 
-%-------Usefull commands --------------
 % \k{I} - uždeda nosines raides
 % Unit conversion - https://tex.stackexchange.com/questions/8260/what-are-the-various-units-ex-em-in-pt-bp-dd-pc-expressed-in-mm
