@@ -1,50 +1,109 @@
-\chapter*{Acronyms and abbreviations - Santaukos/akronimai ir sutrumpinimai}
-\label{cha:acronyms}
-\addcontentsline{toc}{chapter}{\MakeUppercase{Acronyms and abbreviations  - Santaukos/akronimai ir sutrumpinimai}}
-\phantomsection %The \phantomsection command is needed to create a link to a place in the document that is not a figure, equation, table, section, subsection, chapter, etc.
-%\parammarks{Acronyms and abbreviations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Acronyms and abbreviations
+%% What is an abbreviation?
+%% An abbreviation is any shortened or contracted form of a word or phrase. Did you catch the word any in there? That means 
+%% abbreviation is the blanket term for all these shortened words we’ve all been using on social media. Rly is a great example … 
+%% we just took out the vowels—who needs ‘em—and now it’s an abbreviation.
+%% What is an acronym?
+%% For one, acronyms are types of abbreviations. Specifically, an acronym is a specific type of abbreviation formed from the 
+%% first letters of a multi-word term, name, or phrase, with those letters pronounced together as one term. OPEC—or the 
+%% O(rganization of) P(etroleum) E(xporting) C(ountries)—is an acronym because we pronounce it as one word, oh-pek.
+%% Source https://www.dictionary.com/e/acronym-vs-abbreviation/
+%% We use\usepackage[toc]{glossaries} to automatically include title in TOC
 
-%What is an abbreviation?
-%An abbreviation is any shortened or contracted form of a word or phrase. Did you catch the word any in there? That means abbreviation is the blanket term for all these shortened words we’ve all been using on social media. Rly is a great example … we just took out the vowels—who needs ‘em—and now it’s an abbreviation.
-%What is an acronym?
-%For one, acronyms are types of abbreviations. Specifically, an acronym is a specific type of abbreviation formed from the first letters of a multi-word term, name, or phrase, with those letters pronounced together as one term. OPEC—or the O(rganization of) P(etroleum) E(xporting) C(ountries)—is an acronym because we pronounce it as one word, oh-pek.
-%Source https://www.dictionary.com/e/acronym-vs-abbreviation/
 
-\noindent
- \begin{longtable}[l]{ p{3cm} p{8cm} } %Todal available width is 11cm
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        LoremImpus & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-        val.  & Valanda\\ 
-        Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
-        DI    & Dirbtinis intelektas\\ 
-    \label{tab:acronyms}
-\end{longtable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition of Acronyms and abbreviations 
+%% Please use this format \newacronym{name used in \acrlong{}}{Abbreviation}{Long form of acronym or abbreviation}
+%% Commands \acrshort{} (= \gls{}), \acrlong{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newacronym{name used in \acrlong{}}{Abbreviation or accronym}{Long form of abbreviation or acronym}
+% \newabbreviation[〈key=value list〉]{〈label〉}{〈short〉}{〈long〉}
+\newacronym{CIBSE}{CIBSE}{Chartered Institution of Building Services Engineers}
+\newacronym{CO2e}{CO\textsubscript{2}e}{Equivalent \acrlong{CO2}}
+\newacronym{CO2}{CO\textsubscript{2}}{Carbon dioxide}
+\newacronym{CVRMSE}{CV(RMSE)}{Coefficient of Variation of the Root Mean Squared Error}
+\newacronym{AI}{AI}{Artificial Intelligence}
+\newacronym{DI}{DI}{Dirbtinis intelektas}
+\newacronym{val.}{val.}{Valanda}
+\newacronym{Lorem}{Lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu}
+\newacronym{AI2}{AI2}{Artificial Intelligence}
+\newacronym{DI2}{DI2}{Dirbtinis intelektas}
+\newacronym{val.2}{val.2}{Valanda}
+\newacronym{Lorem2}{Lorem2}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu}
+\newacronym{AI3}{AI}{Artificial Intelligence}
+\newacronym{DI3}{DI}{Dirbtinis intelektas}
+\newacronym{val.3}{val.}{Valanda}
+\newacronym{Lorem3}{Lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu}
+\newacronym{AI4}{AI3}{Artificial Intelligence}
+\newacronym{DI4}{DI}{Dirbtinis intelektas}
+\newacronym{val.4}{val.}{Valanda}
+\newacronym{Lorem4}{Lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper hendrerit faucibus. Donec mauris quam, condimentum quis velit et, sodales luctus arcu}
+ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Abbreviations visualization
+%% Do not alter the content below
+
+\setglossarysection{chapter}
+\setglossarystyle{abbr-style}
+\printglossary[type=\acronymtype,title={\MakeUppercase{Acronyms and abbreviations  - Santaukos/akronimai ir sutrumpinimai}}]
+% \paragraph{Note:} Author abbreviations are shown in their corresponding reference entry.
+
+% Show all regardless if they are used or not (if that is what you want). Comment next line to disable it.
+% Both these lines adds empty space at the begining of the section
+% \glsaddall  %Comment this line to remove all unused acronyms and abbreviations
+% \glsaddallunused
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% For manual entering, please use this code
+
+% \chapter*{Acronyms and abbreviations  - Santaukos/akronimai ir sutrumpinimai}
+% \label{cha:notation}
+% \addcontentsline{toc}{chapter}{\MakeUppercase{Acronyms and abbreviations  - Santaukos/akronimai ir sutrumpinimai}}}
+
+% \noindent
+%  \begin{longtable}[l]{ p{3cm} p{8cm} } %Todal available width is 11cm
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         LoremImpus & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%         val.  & Valanda\\ 
+%         Lorem & Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\
+%         DI    & Dirbtinis intelektas\\ 
+%     \label{tab:acronyms}
+% \end{longtable}
+

@@ -132,6 +132,9 @@
 \usepackage{caption}           % Caption and subcaption packages allow to create subfigures and subtables
 \usepackage{subcaption}        % see https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_3)%3A_Figures%2C_Subfigures_and_Tables#Subfigures
 
+\WarningFilter{glossaries}{No language module} % - Removes warning starting with "No language module" from "glossaries"
+\usepackage[toc, nonumberlist,noredefwarn,acronym=true,savewrites]{glossaries} % Makes various glossaries
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Various document formatting redefinitions
 
@@ -168,7 +171,7 @@
 \renewcommand{\cftafterloftitle}{\hfill\ } 
 
 %Formating TOC lists
-\addto\captionsbritish{
+\addto\captionsenglish{
     \renewcommand{\contentsname}{\MakeUppercase{\tableOfContentsName}}
     \renewcommand{\listtablename}{\MakeUppercase{\listOfTableName}}
     \renewcommand{\listfigurename}{\MakeUppercase{\listOfFiguresName}}
@@ -192,10 +195,74 @@
 \setlength{\cftbeforeparaskip}{0pt}
 \setlength{\cftparskip}{5pt}
 
-%Add dot after chapter, section, subsection number to fit dissetation format
+% Add dot after chapter, section, subsection number to fit dissetation format
 \renewcommand{\cftchapaftersnum}{.}
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
+
+%Create glossary for symbols
+% \newglossary[〈glossary-label〉-glg]{〈glossary-label〉}{〈glossary-label〉-
+% gls}{〈glossary-label〉-glo}{〈title〉}[〈counter〉]
+\newglossary[symbols-glg]{symbols}{symbols-gls}{symbols-glo}{Symbols - Žymėjimai}
+\makeglossaries                                                      % Inicialize gloassaries
+
+
+% Changing acronyms and abreviation style
+\newglossarystyle{abbr-style}{%
+    \setglossarystyle{long}% Default style
+    % Put the glossary in a longtable environment:
+    \renewenvironment{theglossary}%
+        {\begin{longtable}[l]{p{3cm}p{8cm}}} %Total available width is 11cm
+        {\end{longtable}}%   
+    % Set the table’s header: title row
+    \renewcommand*{\glossaryheader}{%
+        \bfseries Term & \bfseries Description
+        \\\endhead}%
+    % No table header:
+    \renewcommand*{\glossaryheader}{}%
+    \renewcommand*{\glossentry}[2]{%
+        \glsentryitem{##1}%
+        \glstarget{##1}{\textit{\glossentryname{##1}}} &     %Change of name to italic
+        \glossentrydesc{##1}\glspostdescription\space ##2 \\
+    }
+    % Nothing between groups: (group is term with same starting letter)
+    \renewcommand*{\glsgroupskip}{}%
+}
+
+
+\newglossarystyle{nounits}{%
+    \setglossarystyle{long3colheader}%
+    % put the glossary in a longtable environment:
+    \renewenvironment{theglossary}%
+     {\addcontentsline{toc}{chapter}{\thetitle}
+     \begin{longtable}[l]{p{1in}p{3in}l}}
+     %{\begin{longtable}{lp{\glsdescwidth}l}}%
+     {\end{longtable}}%
+    % Set the table’s header: title row
+    \renewcommand*{\glossaryheader}{%
+     \bfseries Term & \bfseries Description
+     \\\endhead}%
+    % No table header:
+    %\renewcommand*{\glossaryheader}{}%
+    % No heading between groups:
+     \renewcommand*{\glsgroupheading}[1]{}%
+    % Main (level 0) entries displayed in a row optionally numbered:
+     \renewcommand*{\glossaryentryfield}[5]{%
+        \glstarget{##1}{##2}% Name
+        & ##3% Description
+        \\% end of row
+     }%
+    % Similarly for sub-entries (no sub-entry numbers):
+    \renewcommand*{\glossarysubentryfield}[6]{%
+        % ignoring first argument (sub-level)
+        \glstarget{##2}{##3}% Name
+        & ##4% Description
+        \\% end of row
+     }%
+    % Nothing between groups:
+    %\renewcommand*{\glsgroupskip}{}%
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Additional macros
