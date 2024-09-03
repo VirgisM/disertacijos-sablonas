@@ -20,7 +20,7 @@ Informacija ir naudojimas:
 
 
 Naudojimas su Overleaf
-1. Pradedadame naują projektą pasirinktadmi "New Project->Import from GitHub"
+1. Pradedadame naują projektą pasirinktdami "New Project->Import from GitHub"
 2. Nurodykite šablono adresą https://github.com/VirgisM/disertacijos-sablonas.git
 
 
@@ -28,3 +28,4 @@ Disertacijos sandara
 -thesis.tex - pagdindinis disetacijos, parašytos anglų kalba, failas
 -settings.tex - įvairūs nustatymai
 -thesis_bibliography.bib - disertacijos šaltinių sąrašas
+-author's_publications.bib - disertacijos autoriaus publikacijų sąrašas
