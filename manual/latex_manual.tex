@@ -717,7 +717,7 @@ For now, we, however, recommend sticking to Bibtex.
 \section{Glossary}
 \label{sec:Glossary}
 
-A glossary\index{glossary} is a specialized list of terms and definitions often found at the end of a book, article, 
+A glossary\index{Glossary} is a specialized list of terms and definitions often found at the end of a book, article, 
 or in a field of study. It is an alphabetical list of words pertaining to a specific subject, with explanations; 
 a reference tool to aid understanding of specialized language. 
 You can define all glossary entries in \verb|glossaries/glossary.tex| file. You can use it in the text by using \verb|\gls{}|,\verb|\Gls{}| commands to get the printed name of the glossary entry in normal first letter cap form.
@@ -727,10 +727,12 @@ Examples of using such commands are as follows: \gls{latex}, \Gls{latex}, \glspl
 
 Other special forms of glossary are acronyms and symbols in this template. Please read more about them in the next sections.
 For more information about glossaries, you can get from \url{https://www.overleaf.com/learn/latex/Glossaries}.
+\index{symbols}
+
 \section{Acronyms}
 \label{sec:Acronyms}
 
-There are several ways of introducing acronyms. 
+There are several ways of introducing acronyms\index{acronyms}. 
 In general it is good practice to introduce them in full on first use. 
 For example, \verb|\gls{CVRMSE}| produces \gls{CVRMSE}, and it shows in full because 
 it is the first time it is being used.
@@ -746,12 +748,25 @@ that you might want to force showing it in full regardless of previous use:
 You can even show the definition without using the acronym at all: 
 \verb|\acrlong{CIBSE}| produces \acrlong{CIBSE}.
 
-You can define all acronyms and abbreviations entries in \verb|glossaries/acronyms_abbreviations.tex| file.
+You can define all acronyms and abbreviations entries in \\
+\verb|glossaries/acronyms_abbreviations.tex| file.
+
 
 \section{Sybmols}
 \label{sec:Sybmols}
 
-The symbols glossary is a special type of glossary where the author can save all mathematical symbols and notation that are used in this thesis.  You can use it in the text by using \verb|\gls{}|,\verb|\Gls{}| commands to get the printed name of the glossary entry in normal first letter cap form. For example, \verb|\gls{sigma}| is equal to \gls{sigma} and \verb|\gls{mu}| shows \gls{mu}.
+The symbols glossary \index{symbols glossary} is a special type of glossary where the author can save all mathematical symbols and notation that are used in this thesis.  You can use it in the text by using \verb|\gls{}|,\verb|\Gls{}| commands to get the printed name of the glossary entry in normal first letter cap form. For example, \verb|\gls{sigma}| is equal to \gls{sigma} and \verb|\gls{mu}| shows \gls{mu}.
 
-You can define all symbols entries in \verb|glossaries/symbols.tex| file.
+You can define all symbol entries in \verb|glossaries/symbols.tex| file.
+\index{gloassaries|seealso{acronyms, symbols}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Index}
+\label{sec:Index}
+
+It is possible to create an index for the dissertation. For that, you need to include remove comment near include of \verb|index/index.tex| file in the \verb|thesis.tex| file.
+The index items are shown in a two-column style sorted by name.
+
+To add something to the index please use command \verb|\index{keyword}| command.
+
+For more information, you can look at \url{https://www.overleaf.com/learn/latex/Indices}.

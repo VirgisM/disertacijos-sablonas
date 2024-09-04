@@ -11,16 +11,30 @@
 %%   2005.08.25  *  Started.
 %%   2008.03.18  *  Adapted to IZ.
 %%   2024.08.30  *  Fixed to fit VU dissertation template
+%% I overleaf you have to rebuild document from scratch to show renewed index
 
-\chapter{Index}
-\label{chapter:Index}
+% \chapter{Index}
+% \label{chapter:Index}
 % \addtocontents{toc}{\protect\enlargethispage{2\baselineskip}}
 \phantomsection
 % \addcontentsline{toc}{chapter}{\numberline{}Index} % \numberline{} atitraukia į šalį
-\addcontentsline{toc}{chapter}{\MakeUppercase{Index}}
+\addcontentsline{toc}{chapter}{\MakeUppercase{Index / Rodyklė}}
 
 %% Show index items in two-column style sorted by name
 %To add something to the index please use command \index{keyword}
+
+% \makeatletter
+% \def\imki@columns{2}
+% \makeatother
+\def\indexname{Index / Rodyklė}  %Rename the title of the index
+
+% To change various paramettres
+% \renewcommand{\see}[2]{\emph{\seename}~{#1 #2}}
+% \renewcommand{\see}[2]{\emph{\alsoname}~{#1 #2}}
+% Lituanization "see", and "see also"
+% \renewcommand{\seename}{žr.}
+% \renewcommand{\alsoname}{žr. taip pat}
+
 {\raggedright
     \printindex
 }
