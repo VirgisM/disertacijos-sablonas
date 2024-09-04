@@ -1,18 +1,49 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 
-\renewcommand{\thesection}{\alph{section}}
-	
-\chapter*{Appendix / Priedai}
-\label{cha:appendixA}
-\addcontentsline{toc}{chapter}{\MakeUppercase{Appendix / Priedai}}
-\phantomsection %The \phantomsection command is needed to create a link to a place in the document                      that is not a figure, equation, table, section, subsection, chapter, etc.
+%% An example of the appendix 
 
+%% Changes section numbering style to alpha-numeric style
+\renewcommand{\thesection}{\alph{section}}
+
+
+%% Change table and figure numbering by adding the symbol "A." at the beginning of the caption.
+%% You may also need to reset counters and styles for theorems, algoritms and etc.
+%% jeigu yra dar ko nors, pvz algoritmu, teor ir pan, irgi reikia atnaujinti
+\renewcommand*{\thesection}{A}
 \renewcommand{\thefigure}{A.\arabic{figure}}   
 \setcounter{figure}{0}
 \renewcommand{\thetable}{A.\arabic{table}}
 \setcounter{table}{0}
-%jeigu yra dar ko nors, pvz algoritmu, teor ir pan, irgi reikia atnaujinti
 
-\section{Algorithms}
+% \setcounter{section}{0}   %šita automatiškai atnaujina \appendix komanda
+% \renewcommand*{\thesection}{S.\arabic{section}}
+% \renewcommand{\thechapter}{S}
+% \renewcommand{\thefigure}{S.\arabic{figure}}   %raidė S įhardcodinta. Galima švelniau pvz su komanda \thechapter
+% \setcounter{figure}{0}
+% \renewcommand{\theequation}{S.\arabic{equation}}
+% \setcounter{equation}{0}
+% \renewcommand{\thetable}{S.\arabic{table}}
+% \setcounter{table}{0}
 
-In this Appendix we present pseudo codes and the settings used for the peer algorithms, which we implemented and used in experimental evaluation through the thesis. For consistency, the algorithms were named using the first three letters of the surname of the first author.
+%% Header of the appendix chappter
+\chapter*{Appendices / Priedai} % Only for first chapter
+\label{cha:appendices}
+\addcontentsline{toc}{chapter}{\MakeUppercase{Appendices / Priedai}}
+\phantomsection
+
+\section*{Appendix A / A priedas}
+\label{cha:appendixA}
+\addcontentsline{toc}{section}{Appendix A / A Priedas} 
+% \addcontentsline{toc}{section}{Appendix A / A Priedas}
+\phantomsection %The \phantomsection command is needed to create a link to a place in the document that is not a figure, equation, table, section, subsection, chapter, etc.
+
+
+
+
+In the Appendices section, we present pseudo codes and the settings used for the peer algorithms, which we implemented and used in experimental evaluation through the thesis. Also in we can include figures and tables that better illustrate your experiment's conditions and results.
+
+
+\subsection{Algorithm}
+
+% Better use subsections without numbering this way they do not appear in the table of contents
+\subsection*{Algorithm settings}
+

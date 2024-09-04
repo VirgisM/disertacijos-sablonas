@@ -714,8 +714,11 @@ We do not explain here how to work with Biber, but it is, in fact, very similar 
 For now, we, however, recommend sticking to Bibtex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Glossary}
-\label{sec:Glossary}
+\section{Glossaries}
+\label{sec:Glossaries}
+
+\subsection{Glossary}
+\label{subsec:Glossary}
 
 A glossary\index{Glossary} is a specialized list of terms and definitions often found at the end of a book, article, 
 or in a field of study. It is an alphabetical list of words pertaining to a specific subject, with explanations; 
@@ -729,8 +732,8 @@ Other special forms of glossary are acronyms and symbols in this template. Pleas
 For more information about glossaries, you can get from \url{https://www.overleaf.com/learn/latex/Glossaries}.
 \index{symbols}
 
-\section{Acronyms}
-\label{sec:Acronyms}
+\subsection{Acronyms}
+\label{subsec:Acronyms}
 
 There are several ways of introducing acronyms\index{acronyms}. 
 In general it is good practice to introduce them in full on first use. 
@@ -752,8 +755,8 @@ You can define all acronyms and abbreviations entries in \\
 \verb|glossaries/acronyms_abbreviations.tex| file.
 
 
-\section{Sybmols}
-\label{sec:Sybmols}
+\subsection{Sybmols}
+\label{subsec:Sybmols}
 
 The symbols glossary \index{symbols glossary} is a special type of glossary where the author can save all mathematical symbols and notation that are used in this thesis.  You can use it in the text by using \verb|\gls{}|,\verb|\Gls{}| commands to get the printed name of the glossary entry in normal first letter cap form. For example, \verb|\gls{sigma}| is equal to \gls{sigma} and \verb|\gls{mu}| shows \gls{mu}.
 
@@ -770,3 +773,61 @@ The index items are shown in a two-column style sorted by name.
 To add something to the index please use command \verb|\index{keyword}| command.
 
 For more information, you can look at \url{https://www.overleaf.com/learn/latex/Indices}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dissertation template structure}
+\label{sec:template_structure}
+
+This dissertation template has these files that consist of all information required to start compilation of the dissertation
+\begin{itemize}
+    \item \verb|thesis.tex| -- the main thesis file, which includes all scripts and other dissertation parts. You can include or omit any part of the current template by removing comments or commenting on appropriate lines in this file.
+    \item \verb|settings.tex|-- In this file, an author can set various global parameters and constants used in the whole dissertation.
+    \item \verb|thesis_bibliography.bib| -- main bibliography file of the dissertation. The author should omit his own papers on which the dissertation is based from this bibliography and instead include them in the author's bibliography in\\
+    \verb|publications/author's_publications.bib| file.
+\end{itemize}
+
+The content of the dissertation is placed in various folders. You can easily navigate through this content as the folder name corresponds to the section of the dissertation. Note, if you want to remove some folders, please remove reference lines that link these files in the \verb|thesis.tex| file. Please also note that you may need to revise each of these files in order to change the titles of each chapter of your dissertation.
+
+There are descriptions of the folders:
+\begin{itemize}
+    \item \verb|abstract| -- the folder consists of \verb|abstract.tex| file in which text of abstract is placed.
+    \item \verb| acknowledgments |-- the folder consists of \verb|acknowledgments.tex| file in which text of acknowledgments is placed.
+    \item \verb|appendix_A| -- the folder consists of \verb|appendix_a.tex| file in which text of appendix A is placed. If you need to add more appendices please copy-paste this folder and add reference lines that link new folder files in the \verb|thesis.tex| file.
+    \item \verb|bibliography| -- the folder consists of \verb|bibliography.tex| file, which is dedicated to setting the bibliography style and printing it.
+    \item \verb|chapter_1| -- the folder consists of \verb|chapter_1.tex| file in which the text of the first dissertation chapter is placed. If you need to add more chapters please copy-paste this folder and add reference lines that link new folder files in the \verb|thesis.tex| file and rename \verb|chapter_1.tex| file.
+    \item \verb|chapter_concl| -- the folder consists of \verb|chapter_concl.tex| and \verb|chapter_concl_lt.tex| files. In this file, you should include your dissertation conclusions (\verb|chapter_concl.tex|)  and translate to Lithuanian language conclusion (\verb|chapter_concl_lt.tex|) for a summary of your dissertation.
+    \item \verb|chapter_concl| -- the folder consists of \verb|chapter_concl.tex| and \verb|chapter_concl_lt.tex| files. In these files, you should include your dissertation conclusions (\verb|chapter_concl.tex|)  and translate to Lithuanian language conclusion (\verb|chapter_concl_lt.tex|) for a summary of your dissertation.
+    \item \verb|chapter_intro| -- the folder consists of \verb|chapter_intro.tex| and \verb|chapter_intro_lt.tex| files. In these files, you should include your dissertation introduction texts (\verb|chapter_intro.tex|) and translate them to Lithuanian language (\verb|chapter_intro_lt.tex|) for a summary of your dissertation.
+    \item \verb|contents| -- the folder consists of \verb|toc.tex| file, which is dedicated to setting the table of contents. The style of this table is set \verb|macros\preamble.tex| file.
+    \item \verb|cv| -- the folder consists of \verb|cv.tex| file in which text of the author's short curriculum vitae should be placed.
+    \item \verb|glossaries| -- the folder consists of \verb|acronyms_abbreviations.tex|, \verb|glossary.tex| and \verb|symbols.tex| files. In these files, you should include all definitions of acronyms, abbreviations, terms, and symbols that are used in the dissertation. Appropriate styling and printing of these glossaries are also done in each of these files.
+    \item \verb|index| -- the folder consists of \verb|index.tex| file in styling and printing of dissertation index is placed.
+    \item \verb|macros| -- the folder consists of \verb|iz_macros.tex|, \verb|layout.tex| and \verb|preamble.tex| files. These files are included in the template before \verb|\begin{document}| and consist of various scripts to correctly set the environment of the thesis. 
+        \begin{itemize}
+            \item \verb|iz_macros.tex| -- consist of commands for styling, theorems, lemma and more.
+            \item \verb|layout.tex| -- In this file, pdf parameters are set. Also, the style of the thesis paragraph is set here.
+            \item \verb|preamble.tex| -- All required packages are included and configured here to fit the requirements of Vilnius University. All changes done in this file can change the behavior of this template; please do not change it.
+        \end{itemize}
+    \item \verb|manual| -- the folder consists of \verb|latex_manual.tex| file in which text of this manual is placed.
+    \item \verb|publications| -- the folder consists of \verb|author's_publications.bib|, \verb|publications.tex| and \verb|publications(copies).tex| files. 
+        \begin{itemize}
+            \item \verb|author's_publications.bib| -- Place to add author bibliography items. These references are not included in the main bibliography and are used only to create a separate list of author's publications.
+            \item \verb|publications.tex| -- Used to create author's publication lists. Sets correct styling for it.
+            \item \verb|publications(copies).tex| -- Used to include authors pdf's when authors write dissertations on four ISI papers.
+        \end{itemize}
+    \item \verb|publishing| -- the folder consists of \verb|publishing.tex| file in which text of publishing information is added for the last page of the dissertation.
+    \item \verb|summary| -- the folder consists of \verb|summary_en.tex|, \verb|summary_lt.tex|, \verb|summary_text_en.tex| and \verb|summary_text_lt.tex| files. These files are dedicated to creating a dissertation summary in Lithuanian or English (it should be different from the language of your dissertation text).
+        \begin{itemize}
+            \item \verb|summary_en.tex| -- Header of summary in English that is used to set parameters of chapter counters, to set language and other parameters.
+            \item \verb|summary_lt.tex| -- Header of summary in Lithuanian, that is used to set parameters of chapter counters, to set language and other parameters. Use one of these files, which represents the correct language of your summary.
+            \item \verb|summary_text_en.tex| -- Text of the English summary should be written here.
+            \item \verb|summary_text_lt.tex| -- Text of the Lithuanian summary should be written here.
+        \end{itemize}    
+    \item \verb|title| -- the folder consists of \verb|title.tex| file in which texts for of title page are set. Please change this file to fix the spacing between the dissertation title and the footer. Also here, you can add defence details (e.g. date, place).
+    
+    
+    
+\end{itemize}
+
+
