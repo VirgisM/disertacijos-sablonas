@@ -169,7 +169,7 @@
 \renewcommand{\cftafterlottitle}{\hfill\ } 
 \renewcommand{\cftafterloftitle}{\hfill\ } 
 
-%Formating TOC lists
+%Formating TOC lists titles
 \addto\captionsenglish{
     \renewcommand{\contentsname}{\MakeUppercase{\tableOfContentsName}}
     \renewcommand{\listtablename}{\MakeUppercase{\listOfTableName}}
@@ -181,10 +181,13 @@
     \renewcommand{\listfigurename}{\MakeUppercase{\listOfFiguresName}}
 }
 
-% Spacing after TOC titles
+% Spacing for TOC titles
 \setlength{\cftaftertoctitleskip}{13.5pt}
 \setlength{\cftafterlottitleskip}{13.5pt}
 \setlength{\cftafterloftitleskip}{13.5pt}
+\setlength{\cftbeforetoctitleskip}{-10mm} %Fix spacing of Table of contents to meet VU standard
+\setlength{\cftbeforelottitleskip}{-10mm}
+\setlength{\cftbeforeloftitleskip}{-10mm}
 
 % Make correct spacing for all titles in TOC
 \setlength{\cftbeforechapskip}{0pt}
