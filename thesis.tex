@@ -5,9 +5,9 @@
 \includeonly{% comment out lines below to omit to compile
     title/titlepage,
     abstract/abstract,
-    acronyms/acronyms_abbreviations,
-    symbols/symbols,
-    glossary/glossary,
+    glossaries/acronyms_abbreviations,
+    glossaries/symbols,
+    glossaries/glossary,
     chapter_intro/chapter_intro,
     chapter_1/chapter_1,
     manual/latex_manual,        % Please comment if you don't need to include and to compile latex manual
@@ -46,9 +46,9 @@
 %Pagal disertacijos šabloną turinys prasideda nuo įvado
 \include{acknowledgements/acknowledgements}  %Neprivalomas
 \include{abstract/abstract}                  %Reziumė/abstract
-\include{acronyms/acronyms_abbreviations}    %Santaukos/akronimai ir sutrumpinimai/acronyms and abbreviations
-\include{symbols/symbols}                    %Matematiniai žymėjimai/Symbols
-\include{glossary/glossary}              %Jeigu reikia įdėti žodyną, pasitikrinti, kur jis turi buti
+\include{glossaries/acronyms_abbreviations}    %Santaukos/akronimai ir sutrumpinimai/acronyms and abbreviations
+\include{glossaries/symbols}                    %Matematiniai žymėjimai/Symbols
+\include{glossaries/glossary}              %Jeigu reikia įdėti žodyną, pasitikrinti, kur jis turi buti
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Tables of Content, Figures and Tables
@@ -115,7 +115,7 @@
 %% Summary. Note that the main text or summary should be in Lithuanian. Another language preferably is English
 %% In this example we use the dissertation language as English and for the summary Lithuanian
 % Adding text of Lithuanian summary. 
-\include{summary/summary_lt}
+% \include{summary/summary_lt}
 
 \backmatter
 

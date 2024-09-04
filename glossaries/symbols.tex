@@ -1,19 +1,23 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% In this file you can define and print various symbols, preferably mathematical symbols
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Mathematical symbols
+%% Mathematical symbols
+%% Please add type={symbols} at the end of each glossary entry, to assign it to symbols glossary
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newglossaryentry{C_D}{
-  name={$C_{D}$},
-  symbol={$C_{D}$},
-  description={Discharge coefficient}
+    name={$C_{D}$},
+    symbol={$C_{D}$},
+    description={Discharge coefficient},
+    type={symbols}        % Rewuired to make it into symbols glossary
 }
 
 \newglossaryentry{mu}{
-  name={$\mu$},
-  symbol={$\mu$},
-  description={Mean}
+    name={$\mu$},
+    symbol={$\mu$},
+    description={Mean},
+    type={symbols}
 }
 
 \newglossaryentry{sigma}{
@@ -23,17 +27,16 @@
     type={symbols}
 }
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% Glossary - Nomenclature
-% %% Do not alter the content below (the content for those is defined in definitions.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Glossary - Symbols
+%% Do not alter the content below
 
 \setglossarysection{chapter}
 \setglossarystyle{abbr-style}
 \printglossary[type=symbols,title={\MakeUppercase{Symbols - Žymėjimai}}]
-% \paragraph{Note:} Other terms are introduced as they are presented in the studies.
+% \paragraph{Note:} Only used in the thesis text glossary terms will appear in the pdf document of the thesis
 
-% % Enable entries again
-% \glsresetall
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% For manual entering, please use this code

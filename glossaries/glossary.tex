@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% A glossary is a specialized list of terms and definitions often found at the end of a book, article, 
+%% or in a field of study. It %% is an alphabetical list of words pertaining to a specific subject, with explanations; 
+%% a reference tool to aid understanding of specialized language. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Glossary items
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{base learner}{
+  name={base learner},
+  description={bazinis klasifikatorius.}
+}
+
+\newglossaryentry{latex}{
+    name=latex,
+    plural=latexes,   % Not obligatory, but here you can define plural form of name text.
+    description={\hologo{LaTeX} (pronounced “LAY-tek” or “LAH-tek”) is a tool for typesetting professional-looking documents. However, LaTeX’s mode of operation is quite different to many other document-production applications you may have used, such as Microsoft Word or LibreOffice Writer: those “WYSIWYG” tools provide users with an interactive page into which they type and edit their text and apply various forms of styling.}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossary printing
+%% Do not alter the content below
+
+\setglossarysection{chapter}
+\setglossarystyle{gls-style}
+\printglossary[type=main,title={\MakeUppercase{Glossary - Žodynėlis}}]
+% \paragraph{Note:} Only used in the thesis text glossary terms will appear in the pdf document of the thesis
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% For manual entering, please use this code
+
+% \chapter*{Glossary - \v{Z}odyn\.elis}
+% \label{cha:glossary}
+% \addcontentsline{toc}{chapter}{\MakeUppercase{Glossary - \v{Z}odyn\.elis}}
+
+% \noindent
+%  \begin{longtable}[l]{ p{4cm} p{7cm} } %Todal available width is 11cm
+%     base learner   &  bazinis klasifikatorius \\
+%     baseline       &  bazinis metodas \\
+%     change point   &  poky\v{c}io ta\v{s}kas  \\
+%     concept drift  &  koncepcijos pokytis \\
+%     context aware  &  kontekstinis  \\
+%     data mining    &  duomen\k{u} gavyba \\ 
+%     data source    &  duomen\k{u} \v{s}altinis \\
+%     gradual drift  &  palaipsnis pokytis  \\
+%     instance       &  vektorius \\
+%     instance based learning &  mokymas pagal vektorius \\ 
+%     label          &  klas\.e \\
+%     moving average &  slenkantis vidurkis \\ 
+%     peer methods   &  lyginamieji metodai  \\
+%     recurring concepts  &  pasikartojantis pokytis (pasikartojan\v{c}ios koncepcijos)  \\
+%     sequential learning &  mokymas paeiliui  \\
+%     source         &  \v{s}altinis  \\
+%     sudden drift   &  staigus pokytis  \\
+%     supervised learning   &  mokymas su mokytoju  \\
+%     training window       &  mokymo langas  \\
+%     unsupervised learning &  mokymasis  \\
+%     \label{tab:vocabulary}
+% \end{longtable}

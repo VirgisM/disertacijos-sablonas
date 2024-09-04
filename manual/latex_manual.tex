@@ -714,6 +714,19 @@ We do not explain here how to work with Biber, but it is, in fact, very similar 
 For now, we, however, recommend sticking to Bibtex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Glossary}
+\label{sec:Glossary}
+
+A glossary\index{glossary} is a specialized list of terms and definitions often found at the end of a book, article, 
+or in a field of study. It is an alphabetical list of words pertaining to a specific subject, with explanations; 
+a reference tool to aid understanding of specialized language. 
+You can define all glossary entries in \verb|glossaries/glossary.tex| file. You can use it in the text by using \verb|\gls{}|,\verb|\Gls{}| commands to get the printed name of the glossary entry in normal first letter cap form.
+Similarly \LaTeX{} could make the plural form of the name by using these commands \verb|\glspl{}|, \verb|\Glspl{}|.
+
+Examples of using such commands are as follows: \gls{latex}, \Gls{latex}, \glspl{latex}, \Glspl{latex}.
+
+Other special forms of glossary are acronyms and symbols in this template. Please read more about them in the next sections.
+For more information about glossaries, you can get from \url{https://www.overleaf.com/learn/latex/Glossaries}.
 \section{Acronyms}
 \label{sec:Acronyms}
 
@@ -733,11 +746,12 @@ that you might want to force showing it in full regardless of previous use:
 You can even show the definition without using the acronym at all: 
 \verb|\acrlong{CIBSE}| produces \acrlong{CIBSE}.
 
+You can define all acronyms and abbreviations entries in \verb|glossaries/acronyms_abbreviations.tex| file.
 
 \section{Sybmols}
 \label{sec:Sybmols}
 
-\gls{sigma}
+The symbols glossary is a special type of glossary where the author can save all mathematical symbols and notation that are used in this thesis.  You can use it in the text by using \verb|\gls{}|,\verb|\Gls{}| commands to get the printed name of the glossary entry in normal first letter cap form. For example, \verb|\gls{sigma}| is equal to \gls{sigma} and \verb|\gls{mu}| shows \gls{mu}.
 
-\section{Glossary}
-\label{sec:Glossary}
+You can define all symbols entries in \verb|glossaries/symbols.tex| file.
+

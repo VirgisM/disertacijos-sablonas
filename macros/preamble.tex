@@ -200,14 +200,13 @@
 \renewcommand{\cftsecaftersnum}{.}
 \renewcommand{\cftsubsecaftersnum}{.}
 
-%Create glossary for symbols
+%Create a glossary for symbols
 % \newglossary[〈glossary-label〉-glg]{〈glossary-label〉}{〈glossary-label〉-
 % gls}{〈glossary-label〉-glo}{〈title〉}[〈counter〉]
 \newglossary[symbols-glg]{symbols}{symbols-gls}{symbols-glo}{Symbols - Žymėjimai}
-\makeglossaries                                                      % Inicialize gloassaries
+\makeglossaries                                                      % Inicialize all glossaries
 
-
-% Changing acronyms and abreviation style
+% Defining style for acronyms and abbreviations also for symbols glossaries printing
 \newglossarystyle{abbr-style}{%
     \setglossarystyle{long}% Default style
     % Put the glossary in a longtable environment:
@@ -229,40 +228,20 @@
     \renewcommand*{\glsgroupskip}{}%
 }
 
-
-\newglossarystyle{nounits}{%
-    \setglossarystyle{long3colheader}%
-    % put the glossary in a longtable environment:
-    \renewenvironment{theglossary}%
-     {\addcontentsline{toc}{chapter}{\thetitle}
-     \begin{longtable}[l]{p{1in}p{3in}l}}
-     %{\begin{longtable}{lp{\glsdescwidth}l}}%
-     {\end{longtable}}%
-    % Set the table’s header: title row
-    \renewcommand*{\glossaryheader}{%
-     \bfseries Term & \bfseries Description
-     \\\endhead}%
-    % No table header:
-    %\renewcommand*{\glossaryheader}{}%
-    % No heading between groups:
-     \renewcommand*{\glsgroupheading}[1]{}%
-    % Main (level 0) entries displayed in a row optionally numbered:
-     \renewcommand*{\glossaryentryfield}[5]{%
-        \glstarget{##1}{##2}% Name
-        & ##3% Description
-        \\% end of row
-     }%
-    % Similarly for sub-entries (no sub-entry numbers):
-    \renewcommand*{\glossarysubentryfield}[6]{%
-        % ignoring first argument (sub-level)
-        \glstarget{##2}{##3}% Name
-        & ##4% Description
-        \\% end of row
-     }%
-    % Nothing between groups:
-    %\renewcommand*{\glsgroupskip}{}%
+% Defining main glossary printing
+\newglossarystyle{gls-style}{%
+    \setglossarystyle{list}% Default style
+    % \baselineskip=0mm
+    \renewcommand*{\glossaryheader}{}%
+    \renewcommand*{\glossentry}[2]{%
+        \item[\glsentryitem{##1}%
+        \glstarget{##1}{\Glossentryname{##1}}]  % make first letter of word in uppercase
+        -- \glossentrydesc{##1}\glspostdescription\space ##2 % add long - at the start of the description
+    }%
+    
+    % Nothing between groups: (group is term with same starting letter)
+    \renewcommand*{\glsgroupskip}{}%
 }
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Additional macros
