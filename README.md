@@ -25,7 +25,7 @@ Naudojimas su Overleaf
 
 
 Disertacijos sandara
--thesis.tex - pagdindinis disetacijos, parašytos anglų kalba, failas
--settings.tex - įvairūs nustatymai
--thesis_bibliography.bib - disertacijos šaltinių sąrašas
--author's_publications.bib - disertacijos autoriaus publikacijų sąrašas
+- thesis.tex - pagdindinis disetacijos, parašytos anglų kalba, failas
+- settings.tex - įvairūs nustatymai
+- thesis_bibliography.bib - disertacijos šaltinių sąrašas
+- author's_publications.bib - disertacijos autoriaus publikacijų sąrašas
