@@ -20,8 +20,8 @@ Informacija ir naudojimas:
 
 
 Naudojimas su Overleaf
-1. Pradedadame naują projektą pasirinktdami "New Project->Import from GitHub"
-2. Nurodykite šablono adresą https://github.com/VirgisM/disertacijos-sablonas.git
+1. Pradedadame naują projektą pasirinkę "New Project->Import from GitHub".
+2. Nurodykite šablono adresą https://github.com/VirgisM/disertacijos-sablonas.git.
 
 
 Disertacijos sandara:
